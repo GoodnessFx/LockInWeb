@@ -17,7 +17,7 @@ export function About() {
     {
       icon: <BarChart3 className="h-6 w-6" />,
       title: "Visual dashboard that keeps you accountable",
-      description: "Track progress and stay motivated with clear insights on your growth"
+      description: "Track progress and stay motivated with clear insights on your growth!!!"
     }
   ];
 
