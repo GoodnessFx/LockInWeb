@@ -47,42 +47,67 @@ export function Features() {
   ];
 
   return (
-    <section id="features" className="py-20">
+    <section id="features" className="py-24 bg-gradient-to-b from-secondary/10 to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6">
-            Powerful features for disciplined growth
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8"
+          >
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            Features
+          </motion.div>
+          
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl mb-8 font-bold">
+            <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
+              Powerful features
+            </span>
+            <br />
+            <span className="text-foreground">for disciplined growth</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Everything you need to build consistent focus habits and achieve mastery in your chosen niche.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 h-full hover:shadow-lg hover:shadow-primary/10">
-                <div className="flex flex-col items-center text-center">
-                  <div className="p-4 bg-primary/10 rounded-2xl text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 mb-4">
+              <div className="relative bg-card/50 backdrop-blur-sm p-8 rounded-3xl border border-border/50 hover:border-primary/30 transition-all duration-500 h-full hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
+                {/* Background gradient on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative z-10 flex flex-col items-center text-center h-full">
+                  <motion.div 
+                    className="p-5 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-3xl text-primary group-hover:from-primary group-hover:to-blue-500 group-hover:text-white transition-all duration-500 mb-6 shadow-lg group-hover:shadow-xl group-hover:shadow-primary/25"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     {feature.icon}
-                  </div>
-                  <h3 className="text-lg mb-3 group-hover:text-primary transition-colors duration-300">
+                  </motion.div>
+                  
+                  <h3 className="text-xl mb-4 font-semibold group-hover:text-primary transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  
+                  <p className="text-muted-foreground leading-relaxed flex-grow">
                     {feature.description}
                   </p>
                 </div>
@@ -92,15 +117,21 @@ export function Features() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 text-center"
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-20 text-center"
         >
-          <p className="text-muted-foreground">
-            And many more features to help you stay on track with your financial goals.
-          </p>
+          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-blue-500/10 text-primary px-8 py-4 rounded-full border border-primary/20 shadow-lg">
+            <motion.div
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <Target className="h-6 w-6" />
+            </motion.div>
+            <span className="font-semibold text-lg">And many more features to help you achieve your growth goals</span>
+          </div>
         </motion.div>
       </div>
     </section>

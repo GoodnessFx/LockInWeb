@@ -22,19 +22,35 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-secondary/20">
+    <section id="about" className="py-24 bg-gradient-to-b from-background to-secondary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6">
-            Master your niche through discipline
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8"
+          >
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            About LockIn
+          </motion.div>
+          
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl mb-8 font-bold">
+            <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
+              Master your niche
+            </span>
+            <br />
+            <span className="text-foreground">through discipline</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             LockIn helps you build discipline by tracking focused work sessions and blocking distractions, 
             ensuring you consistently grow your skills in tech, photography, or any niche you choose.
           </p>
@@ -44,38 +60,78 @@ export function About() {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-card p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 group"
+              className="relative group"
             >
-              <div className="flex items-center mb-4">
-                <div className="p-3 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                  {feature.icon}
+              <div className="bg-card/50 backdrop-blur-sm p-8 rounded-3xl border border-border/50 hover:border-primary/30 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary/10 group-hover:-translate-y-2 h-full">
+                {/* Background gradient on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center mb-6">
+                    <motion.div 
+                      className="p-4 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl text-primary group-hover:from-primary group-hover:to-blue-500 group-hover:text-white transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:shadow-primary/25"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {feature.icon}
+                    </motion.div>
+                  </div>
+                  
+                  <h3 className="text-xl lg:text-2xl mb-4 font-semibold group-hover:text-primary transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
-              <h3 className="text-xl mb-3 group-hover:text-primary transition-colors duration-300">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground">
-                {feature.description}
-              </p>
             </motion.div>
           ))}
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 text-center"
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-20 text-center"
         >
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full">
-            <CheckCircle className="h-5 w-5" />
-            <span>Join thousands who achieve their growth goals</span>
+          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-blue-500/10 text-primary px-8 py-4 rounded-full border border-primary/20 shadow-lg">
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            >
+              <CheckCircle className="h-6 w-6" />
+            </motion.div>
+            <span className="font-semibold text-lg">Join thousands who achieve their growth goals</span>
           </div>
+          
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 1 }}
+            className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+          >
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">10K+</div>
+              <div className="text-muted-foreground">Active Users</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">50K+</div>
+              <div className="text-muted-foreground">Focus Sessions</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">95%</div>
+              <div className="text-muted-foreground">Success Rate</div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
