@@ -66,7 +66,7 @@ export function BlogPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground pt-20">
       <Navbar />
       
       {/* Hero Section */}
@@ -78,17 +78,7 @@ export function BlogPage() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <div className="flex items-center justify-start mb-8">
-              <Link to="/">
-                <Button
-                  variant="outline"
-                  className="text-muted-foreground hover:text-foreground border-muted-foreground hover:border-primary transition-all duration-200 hover:shadow-sm"
-                >
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  Back to Home
-                </Button>
-              </Link>
-            </div>
+            {/* Back to Home removed per request (was non-functional) */}
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
                 Learn How to <span className="text-primary">Lock In</span>

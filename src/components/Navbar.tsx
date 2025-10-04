@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Download } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function Navbar() {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,25 +29,29 @@ export function Navbar() {
 
   return (
     <motion.nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/90 backdrop-blur-xl border-b border-border shadow-lg' : 'bg-transparent'
+      className={`fixed top-0 w-full z-50 py-4 sm:py-6 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-background/90 backdrop-blur-xl border-b border-border shadow-lg'
+          : (isHome ? 'bg-black/90 border-b border-border/10' : 'bg-transparent')
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18">
+  <div className="flex justify-between items-center h-20">
           {/* Enhanced Logo */}
-          <motion.div 
-            className="flex-shrink-0"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
-              LockIn
-            </span>
-          </motion.div>
+          <Link to="/" className="flex-shrink-0">
+            <motion.div 
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+              className="py-2"
+            >
+              <span className="text-3xl font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
+                LockIn
+              </span>
+            </motion.div>
+          </Link>
 
           {/* Enhanced Desktop Navigation */}
           <div className="hidden md:block">
@@ -59,7 +66,7 @@ export function Navbar() {
                   {link.href.startsWith('#') ? (
                     <a
                       href={link.href}
-                      className="relative text-foreground hover:text-primary transition-colors duration-300 px-3 py-2 rounded-md group"
+                      className={`relative ${isScrolled ? 'text-foreground' : isHome ? 'text-white' : 'text-foreground'} hover:text-primary transition-colors duration-300 px-3 py-2 rounded-md group`}
                     >
                       {link.label}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -67,7 +74,7 @@ export function Navbar() {
                   ) : (
                     <Link
                       to={link.href}
-                      className="relative text-foreground hover:text-primary transition-colors duration-300 px-3 py-2 rounded-md group"
+                      className={`relative ${isScrolled ? 'text-foreground' : isHome ? 'text-white' : 'text-foreground'} hover:text-primary transition-colors duration-300 px-3 py-2 rounded-md group`}
                     >
                       {link.label}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -82,11 +89,13 @@ export function Navbar() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: 0.5 }}
               >
-                <Button
+                <Button asChild
                   className="bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-white px-6 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
                 >
-                  <Download size={18} className="mr-2" />
-                  Download
+                  <a href="/download" aria-label="Download LockIn">
+                    <Download size={18} className="mr-2" />
+                    Download
+                  </a>
                 </Button>
               </motion.div>
             </div>
@@ -98,7 +107,7 @@ export function Navbar() {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:bg-accent/50 transition-colors duration-200"
+              className={`${isScrolled ? 'text-foreground' : isHome ? 'text-white' : 'text-foreground'} hover:bg-accent/50 transition-colors duration-200`}
             >
               <motion.div
                 animate={{ rotate: isOpen ? 90 : 0 }}
@@ -155,12 +164,14 @@ export function Navbar() {
                   transition={{ duration: 0.3, delay: 0.4 }}
                   className="pt-4"
                 >
-                  <Button
+                  <Button asChild
                     className="w-full bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-white py-3 rounded-lg shadow-lg"
                     onClick={() => setIsOpen(false)}
                   >
-                    <Download size={18} className="mr-2" />
-                    Download App
+                    <a href="/download" aria-label="Download LockIn">
+                      <Download size={18} className="mr-2" />
+                      Download App
+                    </a>
                   </Button>
                 </motion.div>
               </div>
@@ -168,6 +179,6 @@ export function Navbar() {
           )}
         </AnimatePresence>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

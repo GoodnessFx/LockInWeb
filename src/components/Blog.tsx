@@ -101,7 +101,7 @@ export function Blog() {
                     </div>
                   </div>
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                    {post.title}
+                    <Link to="/">{post.title}</Link>
                   </CardTitle>
                   <CardDescription className="text-base">
                     {post.excerpt}

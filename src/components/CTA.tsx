@@ -68,22 +68,19 @@ export function CTA() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
             >
-              <Button
-                size="lg"
-                className="group flex items-center gap-3 bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <Download size={22} className="group-hover:animate-bounce" />
-                Download for iOS
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              <Button asChild size="lg" className="group flex items-center gap-3 bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                  <Download size={22} className="group-hover:animate-bounce" />
+                  Download for iOS
+                  <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="group flex items-center gap-3 border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-              >
-                <Play size={22} className="group-hover:scale-110 transition-transform duration-300" />
-                Get on Android
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              <Button asChild size="lg" variant="outline" className="group flex items-center gap-3 border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
+                  <Play size={22} className="group-hover:scale-110 transition-transform duration-300" />
+                  Get on Android
+                  <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
             </motion.div>
 

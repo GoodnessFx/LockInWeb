@@ -108,6 +108,11 @@
     --default-mono-font-feature-settings: var(--font-mono--font-feature-settings);
     --default-mono-font-variation-settings: var(--font-mono--font-variation-settings);
   }
+
+  /* Ensure the page background is dark so no white strip shows above the fixed navbar */
+  html {
+    background-color: #050505;
+  }
 }
 
 @layer base {
@@ -137,6 +142,7 @@
 
   body {
     line-height: inherit;
+    background-color: #050505; /* dark background to match hero and remove white gap */
   }
 
   hr {
