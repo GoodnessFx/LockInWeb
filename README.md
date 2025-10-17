@@ -1,65 +1,86 @@
+# LockIn – 97‑Day Gamified Commitment Growth App (Landing + Blog)
 
-# LockIn - Focus & Productivity App Landing Page
+LockIn is a 97‑day gamified commitment growth app designed to help you lock in your discipline, focus daily, and compound progress. This repository contains the public landing experience and blog, built with React + TypeScript and Vite, styled with Tailwind utilities and custom CSS tokens, and animated with Framer Motion.
 
-A modern, responsive landing page for LockIn - the ultimate focus and productivity app. Built with React, TypeScript, Tailwind CSS, and Framer Motion.
+## What the App Does (Product Overview)
 
-## Features
+- **97‑Day Program**: Users commit to 97 days of consistent action. The philosophy is simple: “rent is due everyday.”
+- **Gamification**: Progress, streaks, and milestones keep motivation high without overwhelming the user.
+- **Focus First**: Quick actions and session framing reduce friction and make it easy to start.
+- **Education**: The blog teaches the science behind focus, consistency, and community accountability.
 
-- 🎯 **Hero Section** - Animated door visualization with rotating motivational quotes
-- 📱 **Responsive Design** - Optimized for all devices
-- 🎨 **Modern UI** - Clean, professional design with smooth animations
-- 📝 **Blog Section** - Comprehensive articles about productivity and focus
-- ⚡ **Fast Performance** - Built with Vite for optimal loading speeds
-- 🌙 **Dark Mode Ready** - Built-in dark theme support
+This repo implements the marketing site for the app, not the app itself.
 
-## What is LockIn?
+## Project Structure
 
-LockIn is a revolutionary productivity app designed to help you "lock in" your focus and achieve your goals through disciplined time management and habit building. The app follows the philosophy that "rent is due everyday" - meaning consistent effort is required to achieve success.
+- `src/App.tsx`: App entry and routes (`/` and `/blog`).
+- `src/main.tsx`: React bootstrap and global providers (e.g., `sonner` toaster).
+- `src/index.css` and `src/styles/globals.css`: Design tokens, CSS variables, and theme layers (includes dark theme).
+- `src/components/*`: Landing sections (`Navbar`, `Hero`, `About`, `Features`, `Preview`, `CTA`, `Contact`, `Footer`).
+- `src/components/ui/*`: Reusable UI primitives (buttons, cards, dialogs, etc.).
+- `src/components/Blog.tsx`: Home page blog preview grid.
+- `src/pages/BlogPage.tsx`: Full blog listing page with animated cards and CTA.
+- `vite.config.ts`: Vite configuration.
 
-## Key Features of LockIn App
+## UX and Visuals
 
-- **Focus Sessions** - Structured time blocks for maximum productivity
-- **Habit Tracking** - Build and maintain positive habits
-- **Progress Analytics** - Track your improvement over time
-- **Community Support** - Connect with like-minded individuals
-- **Smart Scheduling** - AI-powered optimal focus times
-- **Integration Ready** - Works with your existing productivity tools
+- **Responsive by default**: Layouts are composed with fluid containers and CSS grid/flex utilities. Tested across mobile, tablets, and desktops.
+- **Professional Hero**: Clean, black background hero with animated quotes; designed to showcase the brand while keeping focus on the CTA.
+- **Accessible UI**: Semantic HTML, readable contrast, focusable CTAs, and motion that respects content.
+- **Dark Theme Ready**: Global CSS variables power theming; `.dark` root class switches to a deep, accessible palette.
 
-## Development
+## Key Landing + Blog Features
 
-### Prerequisites
+- **Hero with rotating quotes**: Motivational copy fades in/out.
+- **Features and Preview**: Communicate value and show product glimpses.
+- **CTA blocks**: Clear iOS/Android download intents (links are placeholders you can update).
+- **Blog**: Professional grid with icons, dates, read time, and strong typography.
 
-- Node.js 18+ 
-- npm or yarn
+## Getting Started
 
-### Installation
+### Requirements
+
+- Node.js 18+
+- npm
+
+### Install, Develop, Build
 
 ```bash
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
-
-# Build for production
 npm run build
-
-# Preview production build
 npm run preview
 ```
 
-### Deployment
+The build output is written to `build/` and is ready for any static host.
 
-The app is ready for deployment to any static hosting service:
+## Configuration Notes
 
-- **Vercel**: `vercel --prod`
-- **Netlify**: Connect your repository
-- **GitHub Pages**: Use the build folder
-- **AWS S3**: Upload the build folder
+- Update store links in `src/components/Hero.tsx` CTA anchors.
+- To use a photography background instead of solid black in the hero, set a CSS `background-image` on the hero container or inject an inline style with an Unsplash URL. Keep strong contrast for readability.
 
-### Build Output
+## Tech Stack
 
-The production build creates a `build/` folder with optimized assets ready for deployment.
+- React 18, TypeScript, Vite
+- Framer Motion (animations)
+- Tailwind‑style utility classes with custom design tokens
+- Radix UI primitives (menu, dialog, etc.) wrapped in `src/components/ui/*`
+
+## Production Readiness
+
+- Dependency tree installs cleanly; production build passes (`npm run build`).
+- Assets are optimized by Vite; output is suitable for CDNs and static hosting.
+- Lighthouse‑friendly: fast first paint, minimal JS on landing, optimized CSS chunk.
+
+## Contributing
+
+1. Create a feature branch from `main`.
+2. Keep edits focused and small. Match code style and naming conventions.
+3. Ensure `npm run build` passes before opening a PR.
+
+## License
+
+Copyright © LockIn. All rights reserved. Licensed under the MIT License.
 
 ## Technologies Used
 

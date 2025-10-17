@@ -29,98 +29,11 @@ export function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Enhanced Background with Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20"></div>
-      
-      {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_50%)]"></div>
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
-      </div>
-
-      {/* Enhanced Door Animation */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <motion.svg
-          width="1200"
-          height="800"
-          viewBox="0 0 1200 800"
-          className="opacity-20"
-          initial={{ scale: 0.9 }}
-          animate={{ scale: 1.1 }}
-          transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
-        >
-          {/* Outer Door Frame with Glow */}
-          <defs>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-              <feMerge> 
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
-          
-          <rect x="100" y="50" width="1000" height="700" fill="none" stroke="url(#primaryGradient)" strokeWidth="8" rx="20" filter="url(#glow)" />
-          
-          {/* Gradient Definition */}
-          <defs>
-            <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#10b981" />
-              <stop offset="100%" stopColor="#3b82f6" />
-            </linearGradient>
-          </defs>
-          
-          {/* Inner Door Frame */}
-          <rect x="150" y="100" width="900" height="600" fill="none" stroke="url(#primaryGradient)" strokeWidth="6" rx="15" />
-          
-          {/* Left Door Panel */}
-          <motion.rect
-            x="150"
-            y="100"
-            width="445"
-            height="600"
-            fill="url(#primaryGradient)"
-            opacity="0.1"
-            stroke="url(#primaryGradient)"
-            strokeWidth="4"
-            rx="10"
-            initial={{ scaleX: 1 }}
-            animate={{ scaleX: 0.05 }}
-            transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
-            style={{ originX: 0 }}
-          />
-          
-          {/* Right Door Panel */}
-          <motion.rect
-            x="605"
-            y="100"
-            width="445"
-            height="600"
-            fill="url(#primaryGradient)"
-            opacity="0.1"
-            stroke="url(#primaryGradient)"
-            strokeWidth="4"
-            rx="10"
-            initial={{ scaleX: 1 }}
-            animate={{ scaleX: 0.05 }}
-            transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
-            style={{ originX: 1 }}
-          />
-          
-          {/* Enhanced Door Handles */}
-          <circle cx="500" cy="400" r="15" fill="url(#primaryGradient)" opacity="0.6" />
-          <circle cx="700" cy="400" r="15" fill="url(#primaryGradient)" opacity="0.6" />
-          
-          {/* Door Lock Details */}
-          <rect x="480" y="380" width="40" height="40" fill="url(#primaryGradient)" opacity="0.3" rx="5" />
-          <rect x="680" y="380" width="40" height="40" fill="url(#primaryGradient)" opacity="0.3" rx="5" />
-          
-          {/* Decorative Elements */}
-          <rect x="200" y="200" width="300" height="200" fill="none" stroke="url(#primaryGradient)" strokeWidth="3" opacity="0.2" rx="10" />
-          <rect x="700" y="200" width="300" height="200" fill="none" stroke="url(#primaryGradient)" strokeWidth="3" opacity="0.2" rx="10" />
-        </motion.svg>
-      </div>
+      {/* Solid black background or drop-in high-res image */}
+      <div
+        className="absolute inset-0 bg-black"
+        aria-hidden
+      ></div>
 
       {/* Enhanced Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
