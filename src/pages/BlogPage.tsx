@@ -48,53 +48,51 @@ export function BlogPage() {
     {
       id: 5,
       title: "Advanced Features: Maximizing Your LockIn Experience",
-      excerpt: "Deep dive into LockIn's powerful features including analytics, integrations, and customization options.",
-      content: "LockIn offers advanced features like detailed analytics, third-party integrations, and customizable focus modes. The app's AI-powered insights help you understand your productivity patterns and suggest improvements. Integration with calendar apps, project management tools, and other productivity software ensures LockIn fits seamlessly into your existing workflow.",
-      icon: <Target className="w-6 h-6" />,
-      date: "2023-12-28",
-      readTime: "9 min read"
+      excerpt: "Discover the advanced features and hidden gems that can take your productivity to the next level with LockIn.",
+      content: "Beyond the core functionality, LockIn offers a suite of advanced features designed for power users. From custom focus templates to detailed analytics and integrations with other productivity tools, these features provide additional layers of customization and insight. This guide walks you through each advanced feature and provides practical tips for incorporating them into your workflow.",
+      icon: <Zap className="w-6 h-6" />,
+      date: "2023-12-25",
+      readTime: "10 min read"
     },
     {
       id: 6,
-      title: "The LockIn Community: Building Focus Together",
-      excerpt: "Discover how the LockIn community supports and motivates users to maintain consistent focus and achieve their goals.",
-      content: "The LockIn community is a vibrant ecosystem of focused individuals supporting each other's growth. Through challenges, leaderboards, and collaborative features, users can connect with like-minded people, share strategies, and maintain motivation. The community aspect transforms individual productivity into a collective journey toward excellence.",
+      title: "Join the LockIn Community: Connect and Grow Together",
+      excerpt: "Learn how to connect with other LockIn users, share strategies, and participate in challenges to boost your productivity.",
+      content: "The LockIn community is a vibrant network of like-minded individuals committed to personal and professional growth. Through the app's social features, users can connect, share insights, and participate in group challenges. This article explores how to make the most of the community aspects of LockIn and how collective accountability can accelerate your progress.",
       icon: <Users2 className="w-6 h-6" />,
-      date: "2023-12-25",
-      readTime: "6 min read"
+      date: "2023-12-20",
+      readTime: "5 min read"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground pt-20">
+    <div className="min-h-screen bg-background">
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-background to-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-16"
-          >
-            {/* Back to Home removed per request (was non-functional) */}
-            <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                Learn How to <span className="text-primary">Lock In</span>
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Discover the science behind focus, productivity techniques, and real success stories from our community.
-              </p>
-            </div>
-          </motion.div>
+      <div className="h-[120px] md:h-[150px]"></div> {/* Spacer to push content below navbar */}
+      <section className="pt-24 pb-24">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-8"
+            >
+            
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Blog Posts */}
-      <section className="py-20">
+
+      <section className="py-12">
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-8">Recent Posts</h1>
+              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                Discover the science behind focus, productivity techniques, and real success stories from our community.
+              </p>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col space-y-8">
             {blogPosts.map((post, index) => (
               <motion.div
                 key={post.id}
@@ -103,68 +101,87 @@ export function BlogPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <Card className="h-full hover:shadow-lg transition-all duration-300 group-hover:border-primary/20">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="p-3 bg-primary/10 rounded-xl text-primary border border-primary/20">
-                          {post.icon}
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          {post.date} • {post.readTime}
-                        </div>
-                      </div>
+                <div className="flex flex-col md:flex-row gap-4 md:gap-8 mb-8 md:mb-16">
+                  <div className="w-full md:w-1/3 relative overflow-hidden">
+                    <motion.div 
+                      className="h-full flex items-center justify-center py-4 md:py-0"
+                      animate={{ 
+                        scale: [0.95, 1.05, 0.95],
+                      }}
+                      transition={{ 
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      {index === 0 && (
+                        <img 
+                          src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                          alt="Focus companion" 
+                          className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
+                        />
+                      )}
+                      {index === 1 && (
+                        <img 
+                          src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                          alt="Science of focus" 
+                          className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
+                        />
+                      )}
+                      {index === 2 && (
+                        <img 
+                          src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" 
+                          alt="Focus routine" 
+                          className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
+                        />
+                      )}
+                      {index === 3 && (
+                        <img 
+                          src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                          alt="Success stories" 
+                          className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
+                        />
+                      )}
+                      {index === 4 && (
+                        <img 
+                          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                          alt="Advanced features" 
+                          className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
+                        />
+                      )}
+                      {index === 5 && (
+                        <img 
+                          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                          alt="LockIn community" 
+                          className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
+                        />
+                      )}
+                    </motion.div>
+                  </div>
+                  <div className="w-full md:w-2/3 p-6">
+                    <div className="mb-2 flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                      <span>{post.date}</span>
+                      <span>•</span>
+                      <span>{post.readTime}</span>
                     </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    <h2 className="text-xl sm:text-2xl font-bold group-hover:text-primary transition-colors mb-2 sm:mb-3">
                       {post.title}
-                    </CardTitle>
-                    <CardDescription className="text-base">
+                    </h2>
+                    <p className="text-sm sm:text-base text-muted-foreground mb-2 sm:mb-4">
                       {post.excerpt}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      {post.content}
                     </p>
+                    <p className="mb-4 sm:mb-6 text-xs sm:text-sm">{post.content.substring(0, 150)}...</p>
                     <Button 
-                      variant="outline" 
-                      className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 hover:shadow-md"
+                      variant="default" 
+                      className="bg-primary text-white hover:bg-primary/90 text-sm sm:text-base px-3 py-1 sm:px-4 sm:py-2"
                     >
                       Read Full Article
                     </Button>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-primary/10 rounded-2xl p-8"
-          >
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Ready to Start Your Focus Journey?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Join thousands of users who have already transformed their productivity with LockIn.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 text-lg">
-                Download LockIn
-              </Button>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg">
-                Learn More
-              </Button>
-            </div>
-          </motion.div>
         </div>
       </section>
 

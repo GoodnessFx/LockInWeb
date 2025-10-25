@@ -80,7 +80,7 @@ export function CTA() {
                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="group flex items-center gap-3 border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+              <Button asChild size="lg" variant="outline" className="group flex items-center gap-3 border-2 border-primary text-white bg-primary hover:bg-primary/90 px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
                 <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
                   <Play size={22} className="group-hover:scale-110 transition-transform duration-300" />
                   Get on Android
