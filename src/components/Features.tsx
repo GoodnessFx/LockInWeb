@@ -78,6 +78,8 @@ export function Features() {
           <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Everything you need to build consistent focus habits and achieve mastery in your chosen niche.
           </p>
+           <br></br>
+                <br></br>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -123,11 +125,15 @@ export function Features() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-20 text-center"
         >
+           <br></br>
+                <br></br>
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-blue-500/10 text-primary px-8 py-4 rounded-full border border-primary/20 shadow-lg">
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
+            
             >
+              
               <Target className="h-6 w-6" />
             </motion.div>
             <span className="font-semibold text-lg">And many more features to help you achieve your growth goals</span>

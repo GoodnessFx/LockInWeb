@@ -54,6 +54,7 @@ export function About() {
             LockIn helps you build discipline by tracking focused work sessions and blocking distractions, 
             ensuring you consistently grow your skills in tech, photography, or any niche you choose.
           </p>
+            <br></br>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -101,17 +102,26 @@ export function About() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-20 text-center"
         >
+           <br></br>
+                <br></br>
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-blue-500/10 text-primary px-8 py-4 rounded-full border border-primary/20 shadow-lg">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            
             >
+
+              
               <CheckCircle className="h-6 w-6" />
             </motion.div>
+              <br></br>
+                <br></br>
             <span className="font-semibold text-lg">Join thousands who achieve their growth goals</span>
           </div>
           
           {/* Stats */}
+           <br></br>
+                <br></br>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -119,6 +129,7 @@ export function About() {
             transition={{ duration: 0.6, delay: 1 }}
             className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
           >
+            
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">10K+</div>
               <div className="text-muted-foreground">Active Users</div>
@@ -131,6 +142,8 @@ export function About() {
               <div className="text-3xl font-bold text-primary mb-2">95%</div>
               <div className="text-muted-foreground">Success Rate</div>
             </div>
+             <br></br>
+                <br></br>
           </motion.div>
         </motion.div>
       </div>

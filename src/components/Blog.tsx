@@ -12,7 +12,7 @@ export function Blog() {
       excerpt: "LockIn is a revolutionary productivity app designed to help you lock in your focus and achieve your goals through disciplined time management and habit building.",
       content: "LockIn is more than just another productivity app - it's your personal accountability partner. Built with the philosophy that 'rent is due everyday,' LockIn helps you maintain consistent focus on what truly matters. Whether you're an entrepreneur, student, or professional, LockIn provides the structure and motivation you need to stay locked in on your objectives.",
       icon: <Target className="w-6 h-6" />,
-      date: "2024-01-15",
+      date: "2025-01-15",
       readTime: "5 min read"
     },
     {
@@ -21,7 +21,7 @@ export function Blog() {
       excerpt: "Understanding the psychological principles that make LockIn an effective tool for building lasting habits and maintaining focus.",
       content: "LockIn leverages proven psychological principles including the Pomodoro Technique, habit stacking, and behavioral psychology. The app creates a sense of urgency and accountability that mirrors real-world pressures, helping users develop the mental discipline needed for long-term success. By gamifying focus and productivity, LockIn makes the journey toward your goals engaging and sustainable.",
       icon: <Zap className="w-6 h-6" />,
-      date: "2024-01-10",
+      date: "2025-01-10",
       readTime: "7 min read"
     },
     {
@@ -30,7 +30,7 @@ export function Blog() {
       excerpt: "Learn how to create and maintain effective focus routines using LockIn's powerful features and customization options.",
       content: "Creating a successful focus routine starts with understanding your peak performance times and setting realistic goals. LockIn's intelligent scheduling system adapts to your lifestyle, suggesting optimal focus sessions based on your energy levels and commitments. The app's progress tracking helps you identify patterns and optimize your approach for maximum productivity.",
       icon: <Clock className="w-6 h-6" />,
-      date: "2024-01-05",
+      date: "2025-01-05",
       readTime: "6 min read"
     },
     {
@@ -39,7 +39,7 @@ export function Blog() {
       excerpt: "Real testimonials and case studies from LockIn users who have transformed their productivity and achieved their goals.",
       content: "From students improving their study habits to entrepreneurs scaling their businesses, LockIn users consistently report significant improvements in focus, productivity, and goal achievement. The app's community features create a supportive environment where users can share progress, celebrate milestones, and learn from each other's experiences.",
       icon: <TrendingUp className="w-6 h-6" />,
-      date: "2024-01-01",
+      date: "2025-01-01",
       readTime: "8 min read"
     },
     {
@@ -48,7 +48,7 @@ export function Blog() {
       excerpt: "Deep dive into LockIn's powerful features including analytics, integrations, and customization options.",
       content: "LockIn offers advanced features like detailed analytics, third-party integrations, and customizable focus modes. The app's AI-powered insights help you understand your productivity patterns and suggest improvements. Integration with calendar apps, project management tools, and other productivity software ensures LockIn fits seamlessly into your existing workflow.",
       icon: <Shield className="w-6 h-6" />,
-      date: "2023-12-28",
+      date: "2025-12-28",
       readTime: "9 min read"
     },
     {
@@ -57,22 +57,30 @@ export function Blog() {
       excerpt: "Discover how the LockIn community supports and motivates users to maintain consistent focus and achieve their goals.",
       content: "The LockIn community is a vibrant ecosystem of focused individuals supporting each other's growth. Through challenges, leaderboards, and collaborative features, users can connect with like-minded people, share strategies, and maintain motivation. The community aspect transforms individual productivity into a collective journey toward excellence.",
       icon: <Users className="w-6 h-6" />,
-      date: "2023-12-25",
+      date: "2025-12-25",
       readTime: "6 min read"
     }
   ];
 
   return (
-    <section id="blog" className="py-20 bg-muted/30">
+    
+    <section id="blog" className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header Section - shifted downward */}
+          <br></br>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          
           viewport={{ once: true }}
-          className="text-center mb-16"
+        
+          className="text-center mb-20 mt-70"
+          
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <br></br>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-10"><br></br>
             Learn How to <span className="text-primary">Lock In</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -80,6 +88,7 @@ export function Blog() {
           </p>
         </motion.div>
 
+        {/* Blog Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
             <motion.div
@@ -93,7 +102,8 @@ export function Blog() {
               <Card className="h-full hover:shadow-lg transition-all duration-300 group-hover:border-primary/20">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                    {/* Icon properly aligned and slightly lower */}
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary flex items-center justify-center w-10 h-10 relative top-1">
                       {post.icon}
                     </div>
                     <div className="text-sm text-muted-foreground">
@@ -122,12 +132,13 @@ export function Blog() {
           ))}
         </div>
 
+        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="text-center mt-20"
         >
           <div className="bg-primary/10 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">

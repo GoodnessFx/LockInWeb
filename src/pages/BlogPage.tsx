@@ -15,7 +15,7 @@ export function BlogPage() {
       excerpt: "LockIn is a revolutionary productivity app designed to help you lock in your focus and achieve your goals through disciplined time management and habit building.",
       content: "LockIn is more than just another productivity app - it's your personal accountability partner. Built with the philosophy that 'rent is due everyday,' LockIn helps you maintain consistent focus on what truly matters. Whether you're an entrepreneur, student, or professional, LockIn provides the structure and motivation you need to stay locked in on your objectives.",
       icon: <BookOpen className="w-6 h-6" />,
-      date: "2024-01-15",
+      date: "2025-01-15",
       readTime: "5 min read"
     },
     {

@@ -74,7 +74,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="font-medium">Email us</div>
-                  <div className="text-muted-foreground">hello@lockin.app</div>
+                  <div className="text-muted-foreground">lockInjoh@gmail.com</div>
                 </div>
               </div>
 
@@ -84,7 +84,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="font-medium">Live chat</div>
-                  <div className="text-muted-foreground">Available 9am-5pm EST</div>
+                  <div className="text-muted-foreground">Available 9am-5pm GMT</div>
                 </div>
               </div>
 

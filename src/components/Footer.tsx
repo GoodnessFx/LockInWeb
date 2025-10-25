@@ -157,7 +157,7 @@ export function Footer() {
             <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
               <span>© 2025 LockIn. All rights reserved.</span>
               <span className="hidden sm:inline">•</span>
-              <span>Made with ❤️ for disciplined creators</span>
+              <span>Made For anyone who wants to up their game No Bs!!!</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <a href="#privacy" className="hover:text-foreground transition-colors">

@@ -12,6 +12,7 @@ export function Hero() {
     "Stop scrolling, start building.",
     "Your niche won't grow itself.",
     "Focus mode: activated.",
+    "Lock in joh",
     "Dreams don't work unless you do.",
     "Consistency beats perfection.",
     "Lock in now, thank yourself later.",
@@ -67,7 +68,8 @@ export function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+<></>
+<div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
             Available on iOS & Android
           </motion.div>
         </motion.div>
@@ -138,6 +140,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mt-8 text-sm text-muted-foreground/80"
         >
+          <br></br>
           Available on iOS and Android • Free to download
         </motion.p>
       </div>

@@ -8,13 +8,18 @@ export function CTA() {
     <section className="py-24 bg-gradient-to-b from-background to-secondary/10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
+        
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="relative overflow-hidden"
+        
         >
+          
           {/* Background Effects */}
+           <br></br>
+                <br></br>
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-blue-500/5 to-purple-500/10 rounded-3xl"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(16,185,129,0.1),transparent_50%)] rounded-3xl"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_50%)] rounded-3xl"></div>
