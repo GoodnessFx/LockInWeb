@@ -118,20 +118,38 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 1 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
-          <Button asChild size="lg"
-            className="group flex items-center gap-3 bg-white text-black px-10 py-4 text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:bg-white"
-          >
-            <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
-              <Download size={22} className="text-black group-hover:animate-bounce" />
-              <span className="text-black">Download for iOS</span>
-            </a>
-          </Button>
-          <Button asChild size="lg" variant="default" className="group flex items-center gap-3 bg-white text-black hover:bg-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-              <Play size={22} className="text-black group-hover:scale-110 transition-transform duration-300" />
-              <span className="text-black">Download for Android</span>
-            </a>
-          </Button>
+         <Button 
+  asChild 
+  size="lg"
+  className="group flex items-center gap-3 bg-white text-black px-10 py-4 text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:bg-gray-100"
+>
+  <a 
+    href="https://apps.apple.com/" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    aria-label="Download on the App Store"
+  >
+    <Download size={22} className="text-black group-hover:animate-bounce" />
+    <span className="text-black">Download for iOS</span>
+  </a>
+</Button>
+
+<Button 
+  asChild 
+  size="lg" 
+  className="group flex items-center gap-3 bg-white text-black px-10 py-4 text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:bg-gray-100"
+>
+  <a 
+    href="https://play.google.com/store" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    aria-label="Get on Google Play"
+  >
+    <Play size={22} className="text-black group-hover:scale-110 transition-transform duration-300" />
+    <span className="text-black">Download for Android</span>
+  </a>
+</Button>
+
         </motion.div>
 
         <motion.p

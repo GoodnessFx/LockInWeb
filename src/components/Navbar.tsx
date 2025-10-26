@@ -160,19 +160,21 @@ export function Navbar() {
                 {/* Mobile CTA Button */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 1 }}
                   transition={{ duration: 0.3, delay: 0.4 }}
                   className="pt-4"
                 >
-                  <Button asChild
-                    className="w-full bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-white py-3 rounded-lg shadow-lg"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <a href="/download" aria-label="Download LockIn">
-                      <Download size={18} className="mr-2" />
-                      Download App
-                    </a>
-                  </Button>
+                  <Button 
+  asChild
+  onClick={() => setIsOpen(false)}
+  className="w-full flex items-center justify-center gap-2 bg-white text-black font-semibold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:bg-gray-100"
+>
+  <a href="/download" aria-label="Download LockIn">
+    <Download size={20} className="text-black" />
+    Download App
+  </a>
+</Button>
+
                 </motion.div>
               </div>
             </motion.div>

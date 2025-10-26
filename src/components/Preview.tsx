@@ -57,7 +57,7 @@ export function Preview() {
                     fill="none"
                     strokeLinecap="round"
                     className="text-primary"
-                    style={{
+             style={{
                       strokeDasharray: `${2 * Math.PI * 45}`,
                     }}
                     initial={{ strokeDashoffset: 2 * Math.PI * 45 }}

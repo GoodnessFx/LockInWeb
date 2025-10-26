@@ -24,7 +24,7 @@ export function BlogPage() {
       excerpt: "Understanding the psychological principles that make LockIn an effective tool for building lasting habits and maintaining focus.",
       content: "LockIn leverages proven psychological principles including the Pomodoro Technique, habit stacking, and behavioral psychology. The app creates a sense of urgency and accountability that mirrors real-world pressures, helping users develop the mental discipline needed for long-term success. By gamifying focus and productivity, LockIn makes the journey toward your goals engaging and sustainable.",
       icon: <Lightbulb className="w-6 h-6" />,
-      date: "2024-01-10",
+      date: "2025-01-10",
       readTime: "7 min read"
     },
     {
@@ -33,7 +33,7 @@ export function BlogPage() {
       excerpt: "Learn how to create and maintain effective focus routines using LockIn's powerful features and customization options.",
       content: "Creating a successful focus routine starts with understanding your peak performance times and setting realistic goals. LockIn's intelligent scheduling system adapts to your lifestyle, suggesting optimal focus sessions based on your energy levels and commitments. The app's progress tracking helps you identify patterns and optimize your approach for maximum productivity.",
       icon: <Settings className="w-6 h-6" />,
-      date: "2024-01-05",
+      date: "2025-01-05",
       readTime: "6 min read"
     },
     {
@@ -68,8 +68,12 @@ export function BlogPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <div className="h-[120px] md:h-[150px]"></div> {/* Spacer to push content below navbar */}
+
+      <br></br>
+      <div className="h-[120px] md:h-[150px]"></div> 
+      {/* Spacer to push content below navbar */}
       <section className="pt-24 pb-24">
+        
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <motion.div
@@ -87,10 +91,9 @@ export function BlogPage() {
       {/* Blog Posts */}
 
       <section className="py-12">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-8">Recent Posts</h1>
-              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                Discover the science behind focus, productivity techniques, and real success stories from our community.
-              </p>
+        
+        
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col space-y-8">
             {blogPosts.map((post, index) => (
