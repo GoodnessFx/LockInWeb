@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, Play } from 'lucide-react';
 import { Button } from './ui/button';
-
+import { BackgroundVideo } from './BackgroundVideo';
+// Background reverted to original solid/standard hero.
+  5
 export function Hero() {
   const quotes = [
     "If you don't lock in, you'll spend the rest of your life clocking in.",
@@ -29,15 +31,12 @@ export function Hero() {
   }, [quotes.length]);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Solid black background or drop-in high-res image */}
-      <div
-        className="absolute inset-0 bg-black"
-        aria-hidden
-      ></div>
+    <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden md:-mt-20">
+      {/* Background video only for the Hero section */}
+      <BackgroundVideo src="/videos/613b8ed00faae39ebc90061a735883b8.mp4" position="absolute" />
 
-      {/* Enhanced Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Enhanced Content */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -121,7 +120,7 @@ export function Hero() {
          <Button 
   asChild 
   size="lg"
-  className="group flex items-center gap-3 bg-white text-black px-10 py-4 text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:bg-gray-100"
+  className="group flex items-center gap-3 bg-gray-200 text-black px-10 py-4 text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:bg-gray-300"
 >
   <a 
     href="https://apps.apple.com/" 
@@ -137,7 +136,7 @@ export function Hero() {
 <Button 
   asChild 
   size="lg" 
-  className="group flex items-center gap-3 bg-white text-black px-10 py-4 text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:bg-gray-100"
+  className="group flex items-center gap-3 bg-gray-200 text-black px-10 py-4 text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:bg-gray-300"
 >
   <a 
     href="https://play.google.com/store" 

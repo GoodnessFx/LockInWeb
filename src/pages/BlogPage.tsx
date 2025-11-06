@@ -119,42 +119,42 @@ export function BlogPage() {
                     >
                       {index === 0 && (
                         <img 
-                          src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                          src="/images/WhatsApp%20Image%202025-11-05%20at%2016.33.51_36b59bc8.jpg" 
                           alt="Focus companion" 
                           className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
                         />
                       )}
                       {index === 1 && (
                         <img 
-                          src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                          src="/images/WhatsApp%20Image%202025-11-05%20at%2016.42.37_075f2b7e.jpg" 
                           alt="Science of focus" 
                           className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
                         />
                       )}
                       {index === 2 && (
                         <img 
-                          src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" 
+                          src="/images/WhatsApp%20Image%202025-11-05%20at%2016.44.15_a25dfa30.jpg" 
                           alt="Focus routine" 
                           className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
                         />
                       )}
                       {index === 3 && (
                         <img 
-                          src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                          src="/images/WhatsApp%20Image%202025-11-05%20at%2016.28.09_8275f1d6.jpg" 
                           alt="Success stories" 
                           className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
                         />
                       )}
                       {index === 4 && (
                         <img 
-                          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                          src="/images/WhatsApp%20Image%202025-11-05%20at%2016.32.57_aa202a74.jpg" 
                           alt="Advanced features" 
                           className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
                         />
                       )}
                       {index === 5 && (
                         <img 
-                          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                          src="/images/WhatsApp%20Image%202025-11-05%20at%2016.28.09_8275f1d6.jpg" 
                           alt="LockIn community" 
                           className="w-full h-full object-cover max-w-[80px] max-h-[80px] sm:max-w-[100px] sm:max-h-[100px] md:max-w-[120px] md:max-h-[120px] rounded-lg mx-auto"
                         />

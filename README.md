@@ -96,3 +96,6 @@ Copyright © LockIn. All rights reserved. Licensed under the MIT License.
 
 MIT License - feel free to use this template for your own projects.
   
+
+<!-- Removed cinematic background section to restore original README content -->
+  
