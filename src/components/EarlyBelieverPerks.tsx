@@ -4,6 +4,18 @@ export function EarlyBelieverPerks() {
   return (
     <section className="py-32 bg-[#16213e] overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-[#D4AF37]/10 text-[#D4AF37] px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase border border-[#D4AF37]/20"
+          >
+            <div className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse"></div>
+            Beta Perks
+          </motion.div>
+        </div>
         <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 text-white" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
           Why Join the <span className="text-[#D4AF37] italic">Beta?</span>
         </h2>

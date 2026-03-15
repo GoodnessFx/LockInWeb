@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Clock, BookOpen, Lightbulb, BarChart3, Zap, Users2, ArrowRight, Search } from 'lucide-react';
+import { Clock, Users2, ArrowRight } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
@@ -69,94 +69,89 @@ export function BlogPage() {
       {/* BLOG HERO SECTION */}
       <section style={{ 
         position: 'relative', 
-        padding: '160px 0 100px 0', 
+        padding: '120px 0 60px 0', 
         background: 'linear-gradient(to bottom, #0D1B2A, #080808)',
         borderBottom: '1px solid rgba(255,255,255,0.05)'
       }}>
-        {/* Background Decorative Elements */}
-        <div style={{ 
-          position: 'absolute', top: '20%', right: '-10%', 
-          width: '500px', height: '500px', 
-          background: 'radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%)', 
-          zIndex: 0 
-        }} />
-        
-        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 40px', position: 'relative', zIndex: 1 }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', position: 'relative', zIndex: 1 }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}
           >
-            <span style={{ 
-              fontFamily: 'Montserrat, sans-serif', 
-              fontSize: '0.85rem', fontWeight: 700, 
-              color: '#D4AF37', letterSpacing: '0.3em', 
-              textTransform: 'uppercase', display: 'block', 
-              marginBottom: '24px' 
-            }}>
-              Insights & Resources
-            </span>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center gap-2 bg-[#D4AF37]/10 text-[#D4AF37] px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase border border-[#D4AF37]/20"
+              >
+                <div className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse"></div>
+                Insights & Resources
+              </motion.div>
+            </div>
             <h1 style={{ 
               fontFamily: 'Cormorant Garamond, serif', 
-              fontSize: 'clamp(3rem, 7vw, 5.5rem)', 
+              fontSize: 'clamp(2.5rem, 8vw, 5rem)', 
               fontWeight: 700, lineHeight: 1.1, 
-              marginBottom: '32px', color: 'white' 
+              marginBottom: '24px', color: 'white' 
             }}>
               The <span style={{ color: '#D4AF37', fontStyle: 'italic' }}>Locked In</span> Journal
             </h1>
             <p style={{ 
               fontFamily: 'Nunito Sans, sans-serif', 
-              fontSize: '1.2rem', color: 'rgba(255,255,255,0.6)', 
-              lineHeight: 1.8, fontWeight: 300 
+              fontSize: 'clamp(1rem, 3vw, 1.2rem)', color: 'rgba(255,255,255,0.6)', 
+              lineHeight: 1.7, fontWeight: 300 
             }}>
-              Expert perspectives on deep work, cognitive endurance, and the pursuit of mastery. Learn how to optimize your environment and mindset for peak performance.
+              Expert perspectives on deep work, cognitive endurance, and the pursuit of mastery.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* FEATURED POST */}
-      <section style={{ padding: '80px 40px', maxWidth: '1280px', margin: '0 auto' }}>
+      <section style={{ padding: '60px 24px', maxWidth: '1280px', margin: '0 auto' }}>
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
           style={{ 
-            display: 'flex', flexDirection: 'column', lg: 'row', 
+            display: 'flex', 
+            flexDirection: 'column',
             background: 'rgba(255,255,255,0.03)', 
-            borderRadius: '24px', overflow: 'hidden', 
+            borderRadius: '32px', overflow: 'hidden', 
             border: '1px solid rgba(255,255,255,0.07)',
             cursor: 'pointer'
           }}
           className="featured-card"
         >
-          <div style={{ flex: 1, position: 'relative', minHeight: '350px' }}>
+          <div style={{ position: 'relative', minHeight: '300px', width: '100%' }}>
             <img 
               src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200" 
               alt="Featured" 
-              style={{ width: '100%', height: '100%', objectCover: 'cover', position: 'absolute', inset: 0 }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }}
             />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(8,8,8,0.4), transparent)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(8,8,8,0.8), transparent)' }} />
           </div>
-          <div style={{ flex: 1, padding: '60px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <span style={{ color: '#D4AF37', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '20px' }}>
+          <div style={{ padding: 'clamp(24px, 5vw, 60px)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <span style={{ color: '#D4AF37', fontWeight: 800, fontSize: '0.75rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '20px' }}>
               Featured Story
             </span>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '2.8rem', fontWeight: 700, marginBottom: '24px', lineHeight: 1.2 }}>
+            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 5vw, 2.8rem)', fontWeight: 700, marginBottom: '20px', lineHeight: 1.2 }}>
               The Psychology of Deep Work in an Era of Distraction
             </h2>
-            <p style={{ fontFamily: 'Nunito Sans, sans-serif', fontSize: '1.1rem', color: 'rgba(255,255,255,0.6)', marginBottom: '32px', lineHeight: 1.7 }}>
-              Discover how cognitive load theory and digital minimalism can transform your professional output and personal satisfaction.
+            <p style={{ fontFamily: 'Nunito Sans, sans-serif', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', color: 'rgba(255,255,255,0.6)', marginBottom: '32px', lineHeight: 1.6 }}>
+              Discover how cognitive load theory and digital minimalism can transform your professional output.
             </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#D4AF37', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Users2 size={20} color="#0D1B2A" />
               </div>
               <div>
                 <span style={{ display: 'block', fontSize: '0.9rem', fontWeight: 700 }}>Dr. Sarah Chen</span>
-                <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)' }}>Cognitive Scientist</span>
+                <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)' }}>Cognitive Scientist</span>
               </div>
             </div>
           </div>
@@ -164,21 +159,34 @@ export function BlogPage() {
       </section>
 
       {/* GRID SECTION */}
-      <section style={{ padding: '100px 0' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 40px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '60px' }}>
+      <section style={{ padding: '60px 0' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ 
+            display: 'flex', 
+            flexDirection: 'column',
+            gap: '24px',
+            marginBottom: '48px' 
+          }}>
             <div>
-              <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '3rem', fontWeight: 700 }}>Latest Updates</h3>
+              <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2.5rem, 6vw, 3rem)', fontWeight: 700 }}>Latest Updates</h3>
               <p style={{ color: 'rgba(255,255,255,0.5)', marginTop: '8px' }}>Explore our most recent thoughts and discoveries.</p>
             </div>
-            <div style={{ display: 'flex', gap: '12px' }}>
+            <div style={{ 
+              display: 'flex', 
+              gap: '8px', 
+              overflowX: 'auto', 
+              paddingBottom: '12px',
+              msOverflowStyle: 'none',
+              scrollbarWidth: 'none'
+            }} className="hide-scrollbar">
               {['All', 'Productivity', 'Science', 'Guide', 'Community'].map((cat, i) => (
                 <button key={cat} style={{ 
-                  padding: '8px 20px', borderRadius: '9999px', 
+                  padding: '8px 16px', borderRadius: '9999px', 
                   background: i === 0 ? '#D4AF37' : 'transparent', 
                   color: i === 0 ? '#0D1B2A' : 'white', 
                   border: '1px solid ' + (i === 0 ? '#D4AF37' : 'rgba(255,255,255,0.2)'),
-                  fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer', transition: 'all 0.3s'
+                  fontSize: '0.75rem', fontWeight: 700, cursor: 'pointer', transition: 'all 0.3s',
+                  whiteSpace: 'nowrap'
                 }}>
                   {cat}
                 </button>
@@ -188,8 +196,8 @@ export function BlogPage() {
 
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(380px, 1fr))', 
-            gap: '40px' 
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))', 
+            gap: '24px' 
           }}>
             {blogPosts.map((post, index) => (
               <motion.div
@@ -202,51 +210,51 @@ export function BlogPage() {
                 className="blog-card"
               >
                 <div style={{ 
-                  borderRadius: '20px', overflow: 'hidden', 
+                  borderRadius: '24px', overflow: 'hidden', 
                   background: 'rgba(255,255,255,0.03)', 
                   border: '1px solid rgba(255,255,255,0.06)',
                   transition: 'all 0.3s', height: '100%',
                   display: 'flex', flexDirection: 'column'
                 }}>
-                  <div style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
+                  <div style={{ height: '220px', overflow: 'hidden', position: 'relative' }}>
                     <img 
                       src={post.image} 
                       alt={post.title} 
-                      style={{ width: '100%', height: '100%', objectCover: 'cover', transition: 'transform 0.5s' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }}
                       className="card-img"
                     />
                     <div style={{ 
-                      position: 'absolute', top: '20px', left: '20px', 
-                      background: 'rgba(212,175,55,0.9)', color: '#0D1B2A', 
-                      padding: '4px 12px', borderRadius: '4px', 
-                      fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em'
+                      position: 'absolute', top: '16px', left: '16px', 
+                      background: 'rgba(212,175,55,0.95)', color: '#0D1B2A', 
+                      padding: '4px 10px', borderRadius: '6px', 
+                      fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em'
                     }}>
                       {post.category}
                     </div>
                   </div>
-                  <div style={{ padding: '32px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ display: 'flex', gap: '16px', color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', marginBottom: '16px', fontWeight: 600 }}>
-                      <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <Clock size={12} /> {post.readTime}
+                  <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', gap: '12px', color: 'rgba(255,255,255,0.4)', fontSize: '0.7rem', marginBottom: '12px', fontWeight: 600 }}>
+                      <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                        <Clock size={10} /> {post.readTime}
                       </span>
                       <span>{post.date}</span>
                     </div>
                     <h4 style={{ 
                       fontFamily: 'Cormorant Garamond, serif', 
-                      fontSize: '1.8rem', fontWeight: 700, 
-                      marginBottom: '16px', lineHeight: 1.3, color: 'white' 
+                      fontSize: '1.5rem', fontWeight: 700, 
+                      marginBottom: '12px', lineHeight: 1.3, color: 'white' 
                     }}>
                       {post.title}
                     </h4>
                     <p style={{ 
                       fontFamily: 'Nunito Sans, sans-serif', 
-                      fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)', 
-                      lineHeight: 1.6, marginBottom: '24px' 
+                      fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', 
+                      lineHeight: 1.5, marginBottom: '20px' 
                     }}>
                       {post.excerpt}
                     </p>
-                    <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '8px', color: '#D4AF37', fontWeight: 700, fontSize: '0.9rem' }}>
-                      Read Article <ArrowRight size={16} />
+                    <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '8px', color: '#D4AF37', fontWeight: 700, fontSize: '0.85rem' }}>
+                      Read Article <ArrowRight size={14} />
                     </div>
                   </div>
                 </div>
@@ -255,47 +263,7 @@ export function BlogPage() {
           </div>
         </div>
       </section>
-
-      {/* NEWSLETTER SECTION */}
-      <section style={{ padding: '100px 0', background: '#0D1B2A' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 40px', textAlign: 'center' }}>
-          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '3.5rem', fontWeight: 700, marginBottom: '24px' }}>
-              Don't Miss a <span style={{ color: '#D4AF37', fontStyle: 'italic' }}>Breakthrough</span>
-            </h2>
-            <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '40px', fontSize: '1.1rem' }}>
-              Get our monthly digest of focus research and productivity strategies delivered directly to your inbox.
-            </p>
-            <div style={{ display: 'flex', gap: '12px', maxWidth: '500px', margin: '0 auto' }}>
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                style={{ 
-                  flex: 1, background: 'rgba(255,255,255,0.05)', 
-                  border: '1px solid rgba(255,255,255,0.1)', 
-                  padding: '16px 24px', borderRadius: '9999px', 
-                  color: 'white', outline: 'none' 
-                }} 
-              />
-              <button style={{ 
-                background: '#D4AF37', color: '#0D1B2A', 
-                padding: '0 32px', borderRadius: '9999px', 
-                fontWeight: 800, cursor: 'pointer', border: 'none' 
-              }}>
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Footer />
-
-      <style>{`
-        .featured-card:hover img { transform: scale(1.05); transition: transform 0.8s; }
-        .blog-card:hover .card-img { transform: scale(1.1); }
-        .blog-card:hover > div { border-color: #D4AF37 !important; background: rgba(255,255,255,0.05) !important; transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-      `}</style>
     </div>
   );
 }

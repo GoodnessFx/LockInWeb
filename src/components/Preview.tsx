@@ -20,6 +20,18 @@ export function Preview() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+            <div style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '24px' }}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="inline-flex items-center gap-2 bg-[#D4AF37]/10 text-[#D4AF37] px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase border border-[#D4AF37]/20"
+              >
+                <div className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse"></div>
+                Dashboard Preview
+              </motion.div>
+            </div>
             <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
               Track your <span className="text-[#D4AF37] italic">growth</span> in real-time
             </h2>

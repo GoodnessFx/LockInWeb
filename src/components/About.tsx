@@ -56,7 +56,7 @@ export function About() {
             <br></br>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-10">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -64,28 +64,28 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="relative group"
+              className="relative group h-full"
             >
-              <div className="bg-white/5 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/10 hover:border-[#D4AF37]/40 transition-all duration-500 group-hover:shadow-3xl group-hover:shadow-[#D4AF37]/10 group-hover:-translate-y-3 h-full">
+              <div className="bg-white/5 backdrop-blur-md p-10 md:p-12 rounded-[3rem] border border-white/10 hover:border-[#D4AF37]/40 transition-all duration-500 group-hover:shadow-3xl group-hover:shadow-[#D4AF37]/10 group-hover:-translate-y-3 flex flex-col h-full min-h-[380px]">
                 {/* Background gradient on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                <div className="relative z-10">
-                  <div className="flex items-center mb-8">
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex items-center mb-10">
                     <motion.div 
-                      className="p-5 bg-gradient-to-br from-[#D4AF37]/20 to-[#E5A323]/20 rounded-2xl text-[#D4AF37] group-hover:from-[#D4AF37] group-hover:to-[#E5A323] group-hover:text-white transition-all duration-500 shadow-xl group-hover:shadow-2xl group-hover:shadow-[#D4AF37]/30"
+                      className="p-6 bg-gradient-to-br from-[#D4AF37]/20 to-[#E5A323]/20 rounded-2xl text-[#D4AF37] group-hover:from-[#D4AF37] group-hover:to-[#E5A323] group-hover:text-white transition-all duration-500 shadow-xl group-hover:shadow-2xl group-hover:shadow-[#D4AF37]/30"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.2 }}
                     >
-                      {feature.icon}
+                      {React.cloneElement(feature.icon as React.ReactElement, { className: "h-8 w-8" })}
                     </motion.div>
                   </div>
                   
-                  <h3 className="text-2xl mb-4 font-bold text-white group-hover:text-[#D4AF37] transition-colors duration-300" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                  <h3 className="text-3xl mb-6 font-bold text-white group-hover:text-[#D4AF37] transition-colors duration-300 leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                     {feature.title}
                   </h3>
                   
-                  <p className="text-white/60 leading-relaxed text-lg font-light" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
+                  <p className="text-white/60 leading-relaxed text-lg font-light flex-grow" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
                     {feature.description}
                   </p>
                 </div>

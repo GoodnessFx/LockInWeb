@@ -64,7 +64,7 @@ export function Features() {
             className="inline-flex items-center gap-2 bg-[#D4AF37]/10 text-[#D4AF37] px-4 py-2 rounded-full text-sm font-medium mb-8 border border-[#D4AF37]/20"
           >
             <div className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse"></div>
-            Features
+            About Locked In Features
           </motion.div>
           
           <h2 className="text-4xl sm:text-5xl lg:text-7xl mb-8 font-bold leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>

@@ -17,9 +17,18 @@ export function CommunitySection() {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <span className="inline-block text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-xs mb-6" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            Get Involved
-          </span>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center gap-2 bg-[#D4AF37]/10 text-[#D4AF37] px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase border border-[#D4AF37]/20"
+            >
+              <div className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse"></div>
+              Join the Community
+            </motion.div>
+          </div>
           <h2 className="text-5xl md:text-7xl font-bold mb-8 text-white leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
             Join the <span className="text-[#D4AF37] italic">Community</span>
           </h2>
