@@ -36,6 +36,7 @@
     "cmdk": "^1.1.1",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^11.18.2",
+    "hls.js": "^1.6.15",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.487.0",
     "next-themes": "^0.4.6",
@@ -58,7 +59,7 @@
     "@vitejs/plugin-react-swc": "^3.10.2"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "node --max-old-space-size=4096 ./node_modules/vite/bin/vite.js",
     "prebuild": "node -e \"require('fs').chmodSync('node_modules/vite/bin/vite.js', 0o755)\"",
     "build": "vite build",
     "preview": "vite preview",

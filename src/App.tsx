@@ -1,26 +1,39 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
+import { HeroSlider } from './components/HeroSlider';
+import { LogoStrip } from './components/LogoStrip';
 import { About } from './components/About';
 import { Features } from './components/Features';
 import { Preview } from './components/Preview';
 import { CTA } from './components/CTA';
 import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
 import { BlogPage } from './pages/BlogPage';
+import { EarlyBelieverPerks } from './components/EarlyBelieverPerks';
+import { FoundingMembersWall } from './components/FoundingMembersWall';
+import { CommunitySection } from './components/CommunitySection';
+import { PrivateRoster } from './components/PrivateRoster';
+import { WaitlistBeta } from './components/WaitlistBeta';
+import { Footer } from './components/Footer';
+import { CookieBanner } from './components/CookieBanner';
 
 function HomePage() {
   return (
-    <div className="min-h-screen bg-background text-foreground dark pt-20">
+    <div className="bg-background text-foreground dark">
       <Navbar />
-      <Hero />
+      <HeroSlider />
       <About />
+      <LogoStrip />
       <Features />
       <Preview />
+      <EarlyBelieverPerks />
+      <FoundingMembersWall />
+      <PrivateRoster />
+      <CommunitySection />
+      <WaitlistBeta />
       <CTA />
       <Contact />
       <Footer />
+      <CookieBanner />
     </div>
   );
 }

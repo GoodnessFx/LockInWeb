@@ -1,101 +1,62 @@
-# LockIn – 97‑Day Gamified Commitment Growth App (Landing + Blog)
+LockIn Web
 
-LockIn is a 97‑day gamified commitment growth app designed to help you lock in your discipline, focus daily, and compound progress. This repository contains the public landing experience and blog, built with React + TypeScript and Vite, styled with Tailwind utilities and custom CSS tokens, and animated with Framer Motion.
+Overview
+LockIn is a focus and habit app for students and teams. This repository contains the marketing site built with React, Vite, Tailwind and shadcn UI in TypeScript.
 
-## What the App Does (Product Overview)
+Key Features
+1. Interactive hero with globe visualization that mirrors the provided design reference. Left side contains the product headline and subtext, right side renders the animated globe.
+2. Motivational line marquee at the bottom of the hero.
+3. Waitlist email capture that posts to the existing pipeline and shows an inline success message.
+4. Private beta application via Google Forms. A single button opens the official form in a new tab.
+5. Social follow block, newsletter subscribe and perks grid.
 
-- **97‑Day Program**: Users commit to 97 days of consistent action. The philosophy is simple: “rent is due everyday.”
-- **Gamification**: Progress, streaks, and milestones keep motivation high without overwhelming the user.
-- **Focus First**: Quick actions and session framing reduce friction and make it easy to start.
-- **Education**: The blog teaches the science behind focus, consistency, and community accountability.
+Tech Stack
+1. React 18 with Vite
+2. TypeScript
+3. Tailwind CSS v4
+4. shadcn UI components under src/components/ui
+5. framer motion for light animations
 
-This repo implements the marketing site for the app, not the app itself.
+Project Structure
+src/components/ui holds all reusable UI building blocks and utilities.
+src/components contains page sections such as Hero, WaitlistBeta and Footer.
+src/pages contains optional demo pages.
 
-## Project Structure
+Setup
+1. Install dependencies
+   npm install
+2. Start development server
+   npm run dev
+   The app runs at http://localhost:3000
+3. Build for production
+   npm run build
+   npm run preview
 
-- `src/App.tsx`: App entry and routes (`/` and `/blog`).
-- `src/main.tsx`: React bootstrap and global providers (e.g., `sonner` toaster).
-- `src/index.css` and `src/styles/globals.css`: Design tokens, CSS variables, and theme layers (includes dark theme).
-- `src/components/*`: Landing sections (`Navbar`, `Hero`, `About`, `Features`, `Preview`, `CTA`, `Contact`, `Footer`).
-- `src/components/ui/*`: Reusable UI primitives (buttons, cards, dialogs, etc.).
-- `src/components/Blog.tsx`: Home page blog preview grid.
-- `src/pages/BlogPage.tsx`: Full blog listing page with animated cards and CTA.
-- `vite.config.ts`: Vite configuration.
+Environment Variables
+Create a file named .env.local at the project root. Add the following keys if you already have Google endpoints.
 
-## UX and Visuals
+VITE_GOOGLE_APPS_SCRIPT_URL=your_apps_script_web_app_url
+VITE_GOOGLE_BETA_FORM_URL=your_public_google_form_url
+VITE_GOOGLE_RESPONSE_URL=optional_public_google_response_page_url
 
-- **Responsive by default**: Layouts are composed with fluid containers and CSS grid/flex utilities. Tested across mobile, tablets, and desktops.
-- **Professional Hero**: Clean, black background hero with animated quotes; designed to showcase the brand while keeping focus on the CTA.
-- **Accessible UI**: Semantic HTML, readable contrast, focusable CTAs, and motion that respects content.
-- **Dark Theme Ready**: Global CSS variables power theming; `.dark` root class switches to a deep, accessible palette.
+Notes
+1. When VITE_GOOGLE_APPS_SCRIPT_URL is not set, form submissions simulate success so local development never blocks.
+2. Set VITE_GOOGLE_BETA_FORM_URL to the exact public Google Form link so the beta button opens your form.
+3. If VITE_GOOGLE_RESPONSE_URL is set, a button appears to open the official Google response page in a new tab.
 
-## Key Landing + Blog Features
+Editing Content
+Hero copy lives in src/components/Hero.tsx.
+Waitlist, beta and newsletter copy lives in src/components/WaitlistBeta.tsx.
 
-- **Hero with rotating quotes**: Motivational copy fades in/out.
-- **Features and Preview**: Communicate value and show product glimpses.
-- **CTA blocks**: Clear iOS/Android download intents (links are placeholders you can update).
-- **Blog**: Professional grid with icons, dates, read time, and strong typography.
+Design Choices
+The hero is implemented as a two column card with a soft glow and a rotating dot globe. The layout is mobile first and scales from a single column to a side by side presentation on larger screens. Motivational lines scroll across the bottom of the hero for ambient motion without distracting from the call to action.
 
-## Getting Started
+Accessibility
+Form labels are present and inputs are keyboard accessible. Buttons use descriptive aria labels where navigation opens a new tab.
 
-### Requirements
+Troubleshooting
+If npm run build fails due to a local Node path issue, use npm run dev to run a Vite dev server, or reinstall Node and run npm install again.
+If styles look incorrect ensure src/index.css is loaded and Tailwind is active.
 
-- Node.js 18+
-- npm
-
-### Install, Develop, Build
-
-```bash
-npm install
-npm run dev
-npm run build
-npm run preview
-```
-
-The build output is written to `build/` and is ready for any static host.
-
-## Configuration Notes
-
-- Update store links in `src/components/Hero.tsx` CTA anchors.
-- To use a photography background instead of solid black in the hero, set a CSS `background-image` on the hero container or inject an inline style with an Unsplash URL. Keep strong contrast for readability.
-
-## Tech Stack
-
-- React 18, TypeScript, Vite
-- Framer Motion (animations)
-- Tailwind‑style utility classes with custom design tokens
-- Radix UI primitives (menu, dialog, etc.) wrapped in `src/components/ui/*`
-
-## Production Readiness
-
-- Dependency tree installs cleanly; production build passes (`npm run build`).
-- Assets are optimized by Vite; output is suitable for CDNs and static hosting.
-- Lighthouse‑friendly: fast first paint, minimal JS on landing, optimized CSS chunk.
-
-## Contributing
-
-1. Create a feature branch from `main`.
-2. Keep edits focused and small. Match code style and naming conventions.
-3. Ensure `npm run build` passes before opening a PR.
-
-## License
-
-Copyright © LockIn. All rights reserved. Licensed under the MIT License.
-
-## Technologies Used
-
-- **React 18** - Modern React with hooks
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first styling
-- **Framer Motion** - Smooth animations
-- **Vite** - Fast build tool
-- **Radix UI** - Accessible component primitives
-- **Lucide React** - Beautiful icons
-
-## License
-
-MIT License - feel free to use this template for your own projects.
-  
-
-<!-- Removed cinematic background section to restore original README content -->
-  
+Ownership
+Default form destinations use goodnessiyamah1@gmail.com. Update src/components/WaitlistBeta.tsx if you need a different recipient.

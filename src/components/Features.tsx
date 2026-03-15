@@ -47,7 +47,7 @@ export function Features() {
   ];
 
   return (
-    <section id="features" className="py-24 bg-gradient-to-b from-secondary/10 to-background">
+    <section id="features" className="py-24 bg-[#16213e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -61,21 +61,19 @@ export function Features() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 bg-[#D4AF37]/10 text-[#D4AF37] px-4 py-2 rounded-full text-sm font-medium mb-8 border border-[#D4AF37]/20"
           >
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse"></div>
             Features
           </motion.div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl mb-8 font-bold">
-            <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Powerful features
-            </span>
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl mb-8 font-bold leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+            <span className="text-white">Powerful features for</span>
             <br />
-            <span className="text-foreground">for disciplined growth</span>
+            <span className="text-[#D4AF37] italic">disciplined growth</span>
           </h2>
           
-          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl lg:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
             Everything you need to build consistent focus habits and achieve mastery in your chosen niche.
           </p>
            <br></br>
@@ -92,24 +90,24 @@ export function Features() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative bg-card/50 backdrop-blur-sm p-8 rounded-3xl border border-border/50 hover:border-primary/30 transition-all duration-500 h-full hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
+              <div className="relative bg-white/5 backdrop-blur-md p-8 rounded-[2rem] border border-white/10 hover:border-[#D4AF37]/40 transition-all duration-500 h-full hover:shadow-2xl hover:shadow-[#D4AF37]/10 hover:-translate-y-2">
                 {/* Background gradient on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <div className="relative z-10 flex flex-col items-center text-center h-full">
                   <motion.div 
-                    className="p-5 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-3xl text-primary group-hover:from-primary group-hover:to-blue-500 group-hover:text-white transition-all duration-500 mb-6 shadow-lg group-hover:shadow-xl group-hover:shadow-primary/25"
+                    className="p-5 bg-gradient-to-br from-[#D4AF37]/20 to-[#E5A323]/20 rounded-2xl text-[#D4AF37] group-hover:from-[#D4AF37] group-hover:to-[#E5A323] group-hover:text-white transition-all duration-500 mb-6 shadow-lg group-hover:shadow-xl group-hover:shadow-[#D4AF37]/25"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.2 }}
                   >
                     {feature.icon}
                   </motion.div>
                   
-                  <h3 className="text-xl mb-4 font-semibold group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-2xl mb-4 font-bold text-white group-hover:text-[#D4AF37] transition-colors duration-300" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                     {feature.title}
                   </h3>
                   
-                  <p className="text-muted-foreground leading-relaxed flex-grow">
+                  <p className="text-white/60 leading-relaxed font-light" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
                     {feature.description}
                   </p>
                 </div>
@@ -127,16 +125,14 @@ export function Features() {
         >
            <br></br>
                 <br></br>
-          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-blue-500/10 text-primary px-8 py-4 rounded-full border border-primary/20 shadow-lg">
+          <div className="inline-flex items-center gap-4 bg-gradient-to-r from-[#D4AF37]/10 to-transparent text-[#D4AF37] px-10 py-5 rounded-full border border-[#D4AF37]/20 shadow-2xl backdrop-blur-sm">
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
-            
             >
-              
-              <Target className="h-6 w-6" />
+              <Target className="h-7 w-7" />
             </motion.div>
-            <span className="font-semibold text-lg">And many more features to help you achieve your growth goals</span>
+            <span className="font-bold text-xl" style={{ fontFamily: 'Cormorant Garamond, serif' }}>And many more features to help you achieve your growth goals</span>
           </div>
         </motion.div>
       </div>

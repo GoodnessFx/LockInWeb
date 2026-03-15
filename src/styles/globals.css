@@ -1,7 +1,19 @@
-@custom-variant dark (&:is(.dark *));
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Geist:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800&family=Cormorant+Garamond:wght@400;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+.font-heading {
+  font-family: 'Clash Display', sans-serif;
+}
+
+.font-sans {
+  font-family: 'Geist', sans-serif;
+}
 
 :root {
+  --gold: #D4AF37;
+  --navy: #0D1B2A;
   --font-size: 16px;
+  --font-family: 'Geist', sans-serif;
+  --font-family-heading: 'Clash Display', sans-serif;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
@@ -43,13 +55,13 @@
 
 .dark {
   /* ChatGPT-inspired dark theme */
-  --background: #0f0f23;
+  --background: #0a0a0a;
   --foreground: #ffffff;
   --card: #1a1a2e;
   --card-foreground: #ffffff;
   --popover: #1a1a2e;
   --popover-foreground: #ffffff;
-  --primary: #10b981;
+  --primary: #00ff00;
   --primary-foreground: #ffffff;
   --secondary: #16213e;
   --secondary-foreground: #ffffff;
@@ -79,7 +91,29 @@
   --sidebar-ring: #10b981;
 }
 
-@theme inline {
+@layer base {
+  html, body {
+    @apply overflow-x-hidden w-screen;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Geist', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Clash Display', sans-serif;
+  }
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
+}
+
+.marquee-left {
+  display: inline-block;
+  animation: marquee-left 40s linear infinite;
+}
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -118,6 +152,31 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-scroll 35s linear infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.33); opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 @layer base {
@@ -306,8 +365,17 @@ html {
   }
 }
 
-.animate-fadeInUp {
-  animation: fadeInUp 0.6s ease-out;
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  }
+  50% {
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
 }
 
 .animate-slideInLeft {
