@@ -114,6 +114,7 @@
   display: inline-block;
   animation: marquee-left 40s linear infinite;
 }
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
