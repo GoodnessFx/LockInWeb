@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { HeroSlider } from './components/HeroSlider';
-import { LogoStrip } from './components/LogoStrip';
 import { About } from './components/About';
 import { Features } from './components/Features';
 import { Preview } from './components/Preview';
@@ -22,7 +21,6 @@ function HomePage() {
       <Navbar />
       <HeroSlider />
       <About />
-      <LogoStrip />
       <Features />
       <Preview />
       <EarlyBelieverPerks />

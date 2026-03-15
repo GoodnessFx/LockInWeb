@@ -117,7 +117,7 @@ export function BlogPage() {
       </section>
 
       {/* FEATURED POST */}
-      <section style={{ padding: '80px 0', maxWidth: '1280px', margin: '0 auto', padding: '0 40px' }}>
+      <section style={{ padding: '80px 40px', maxWidth: '1280px', margin: '0 auto' }}>
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
