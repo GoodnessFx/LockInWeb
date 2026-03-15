@@ -83,7 +83,7 @@ export function PrivateRoster() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (!GOOGLE_SHEETS_API_KEY) return null;
+  // if (!GOOGLE_SHEETS_API_KEY) return null;
 
   return (
     <section className="py-32 bg-[#16213e] overflow-hidden">

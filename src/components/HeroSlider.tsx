@@ -23,7 +23,7 @@ import { useState, useEffect } from 'react';
  export function HeroSlider() { 
    const [currentSlide, setCurrentSlide] = useState(0); 
    const [phraseIndex, setPhraseIndex] = useState(0); 
-   const [isLoaded, setIsLoaded] = useState<boolean[]>(Array(IMAGES.length).fill(false)); 
+   const [isLoaded, setIsLoaded] = useState<boolean[]>(Array(IMAGES.length).fill(true)); 
    
    useEffect(() => { 
      IMAGES.forEach((src, index) => { 
@@ -48,7 +48,7 @@ import { useState, useEffect } from 'react';
          <motion.div 
            key={currentSlide} 
            initial={{ opacity: 0 }} 
-           animate={{ opacity: isLoaded[currentSlide] ? 1 : 0 }} 
+           animate={{ opacity: 1 }} 
            exit={{ opacity: 0 }} 
            transition={{ duration: 1.5 }} 
            style={{ 
