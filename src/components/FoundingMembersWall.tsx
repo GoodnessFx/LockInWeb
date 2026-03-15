@@ -4,11 +4,12 @@ import { Trophy, Star, Medal } from 'lucide-react';
 
 export function FoundingMembersWall() {
   const members = [
-    "Alex Chen",
-    "Sarah Kim",
-    "Marcus Rodriguez",
-    "Emma Thompson",
-    "David Park"
+    "Iyamah Goodness",
+    "Oluwatobi Onatade",
+    "Gold",
+    "Joel",
+    "Muiz",
+    "Pele(Odinaka)"
   ];
 
   const getRankBadge = (index: number) => {
@@ -21,7 +22,7 @@ export function FoundingMembersWall() {
   };
 
   return (
-    <section className="py-24 bg-[#0D1B2A] overflow-hidden">
+    <section className="py-32 bg-[#0D1B2A] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

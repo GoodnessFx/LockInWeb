@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export function EarlyBelieverPerks() {
   return (
-    <section className="py-24 bg-[#16213e] overflow-hidden">
+    <section className="py-32 bg-[#16213e] overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 text-white" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
           Why Join the <span className="text-[#D4AF37] italic">Beta?</span>

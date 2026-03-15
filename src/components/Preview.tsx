@@ -10,7 +10,7 @@ export function Preview() {
   const daysLeft = 8;
 
   return (
-    <section className="py-24 bg-[#0D1B2A] overflow-hidden">
+    <section id="preview" className="py-32 bg-[#0D1B2A] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
           {/* Left side - Progress Dashboard */}

@@ -34,7 +34,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#0D1B2A] overflow-hidden">
+    <section id="contact" className="py-32 bg-[#0D1B2A] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
