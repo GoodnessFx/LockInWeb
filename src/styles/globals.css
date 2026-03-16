@@ -135,7 +135,7 @@
 
 @layer base {
   html, body {
-    @apply overflow-x-hidden w-screen;
+    @apply overflow-x-hidden max-w-full;
     margin: 0;
     padding: 0;
   }

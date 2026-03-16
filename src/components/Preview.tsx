@@ -32,25 +32,25 @@ export function Preview() {
                 Dashboard Preview
               </motion.div>
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 text-white leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
               Track your <span className="text-[#D4AF37] italic">growth</span> in real-time
             </h2>
-            <p className="text-xl text-white/60 mb-10 font-light" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
+            <p className="text-lg sm:text-xl text-white/60 mb-10 font-light" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
               See exactly how many focused hours you've put in and how close you are to your skill mastery goals.
             </p>
 
             {/* Progress Circle Mockup */}
-            <div className="bg-white/5 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/10 shadow-2xl relative overflow-hidden group">
+            <div className="bg-white/5 backdrop-blur-xl p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] border border-white/10 shadow-2xl relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative z-10">
                 <div className="text-center mb-10">
-                  <h3 className="text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant Garamond, serif' }}>This Month's Growth</h3>
-                  <p className="text-white/40 tracking-widest text-xs uppercase font-bold">Photography Mastery • March 2026</p>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant Garamond, serif' }}>This Month's Growth</h3>
+                  <p className="text-white/40 tracking-widest text-[10px] sm:text-xs uppercase font-bold">Photography Mastery • March 2026</p>
                 </div>
 
                 {/* Circular Progress */}
-                <div className="relative w-56 h-56 mx-auto mb-10">
+                <div className="relative w-48 h-48 sm:w-56 sm:h-56 mx-auto mb-10">
                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                     <circle
                       cx="50"

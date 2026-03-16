@@ -44,7 +44,7 @@ export function WaitlistBeta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white/5 rounded-[3rem] p-12 md:p-20 border border-white/10 backdrop-blur-xl shadow-2xl"
+          className="bg-white/5 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 md:p-20 border border-white/10 backdrop-blur-xl shadow-2xl mx-4 sm:mx-0"
         >
           <h3 className="text-3xl md:text-6xl font-bold text-white mb-8" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
             Apply for Private Beta — <span className="text-[#D4AF37]">100 Spots Only</span>

@@ -41,7 +41,7 @@ import { useState, useEffect } from 'react';
    }, []); 
    
    return ( 
-     <div style={{ position: 'relative', height: '100vh', width: '100vw', overflow: 'hidden', backgroundColor: '#0D1B2A' }}> 
+     <div style={{ position: 'relative', height: '100vh', width: '100%', overflow: 'hidden', backgroundColor: '#0D1B2A' }}> 
    
        {/* BACKGROUND SLIDES */} 
        <AnimatePresence mode="wait"> 

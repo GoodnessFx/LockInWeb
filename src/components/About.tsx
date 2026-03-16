@@ -104,14 +104,14 @@ export function About() {
         >
            <br></br>
                 <br></br>
-          <div className="inline-flex items-center gap-4 bg-gradient-to-r from-[#D4AF37]/10 to-transparent text-[#D4AF37] px-10 py-5 rounded-full border border-[#D4AF37]/20 shadow-2xl backdrop-blur-sm">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-gradient-to-r from-[#D4AF37]/10 to-transparent text-[#D4AF37] px-6 sm:px-10 py-4 sm:py-5 rounded-3xl sm:rounded-full border border-[#D4AF37]/20 shadow-2xl backdrop-blur-sm mx-4">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             >
-              <CheckCircle className="h-7 w-7" />
+              <CheckCircle className="h-6 w-6 sm:h-7 sm:w-7" />
             </motion.div>
-            <span className="font-bold text-xl" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Join thousands who achieve their growth goals</span>
+            <span className="font-bold text-lg sm:text-xl text-center" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Join thousands who achieve their growth goals</span>
           </div>
           
           {/* Stats */}
@@ -122,20 +122,20 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 1 }}
-            className="mt-16 grid grid-cols-3 gap-12 max-w-3xl mx-auto"
+            className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 max-w-3xl mx-auto px-6"
           >
             
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>10K+</div>
-              <div className="text-white/50 text-sm tracking-widest uppercase font-bold">Active Users</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2 sm:mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>10K+</div>
+              <div className="text-white/50 text-xs sm:text-sm tracking-widest uppercase font-bold">Active Users</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>50K+</div>
-              <div className="text-white/50 text-sm tracking-widest uppercase font-bold">Focus Sessions</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2 sm:mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>50K+</div>
+              <div className="text-white/50 text-xs sm:text-sm tracking-widest uppercase font-bold">Focus Sessions</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>95%</div>
-              <div className="text-white/50 text-sm tracking-widest uppercase font-bold">Success Rate</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2 sm:mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>95%</div>
+              <div className="text-white/50 text-xs sm:text-sm tracking-widest uppercase font-bold">Success Rate</div>
             </div>
              <br></br>
                 <br></br>
