@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { GOOGLE_SHEETS_API_KEY, GOOGLE_SHEET_ID, GOOGLE_SHEET_RANGE, GOOGLE_SHEET_GID } from "@/lib/links";
-
-type RosterEntry = {
-  name: string;
-  email?: string;
-  joinedAt?: string;
-};
+import { fetchRosterEntries, RosterEntry } from "@/lib/googleSheets";
 
 export function PrivateRoster() {
   const [roster, setRoster] = useState<RosterEntry[]>([]);
@@ -14,73 +8,27 @@ export function PrivateRoster() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    console.log("PrivateRoster: Starting to load roster");
-    console.log("API Key present:", !!GOOGLE_SHEETS_API_KEY);
-    console.log("Sheet ID:", GOOGLE_SHEET_ID);
-    console.log("Range:", GOOGLE_SHEET_RANGE);
-
-    if (!GOOGLE_SHEETS_API_KEY || !GOOGLE_SHEET_ID) {
-      setError("Google Sheets API not configured.");
-      return;
-    }
-
+    let canceled = false;
     setLoading(true);
+    setError(null);
 
-    // First, get spreadsheet metadata to find the sheet name by gid
-    const metaUrl = `https://sheets.googleapis.com/v4/spreadsheets/${GOOGLE_SHEET_ID}?key=${GOOGLE_SHEETS_API_KEY}`;
-    console.log("Fetching metadata URL:", metaUrl.replace(GOOGLE_SHEETS_API_KEY, "[API_KEY]"));
-
-    fetch(metaUrl)
-      .then((res) => {
-        console.log("Metadata response status:", res.status);
-        if (!res.ok) {
-          throw new Error(`Metadata API error: ${res.status} ${res.statusText}`);
-        }
-        return res.json();
-      })
-      .then((meta) => {
-        console.log("Metadata:", meta);
-        const sheets = meta.sheets || [];
-        const targetSheet = sheets.find((s: any) => s.properties?.sheetId === parseInt(GOOGLE_SHEET_GID));
-        const sheetName = targetSheet?.properties?.title || "Sheet1"; // fallback to Sheet1
-        console.log("Target sheet name:", sheetName);
-
-        const range = `${sheetName}!${GOOGLE_SHEET_RANGE}`;
-        const url = `https://sheets.googleapis.com/v4/spreadsheets/${GOOGLE_SHEET_ID}/values/${range}?key=${GOOGLE_SHEETS_API_KEY}`;
-        console.log("Fetching data URL:", url.replace(GOOGLE_SHEETS_API_KEY, "[API_KEY]"));
-
-        return fetch(url);
-      })
-      .then((res) => {
-        console.log("Data response status:", res.status);
-        if (!res.ok) {
-          throw new Error(`Data API error: ${res.status} ${res.statusText}`);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        console.log("API Response:", data);
-        if (data.values && Array.isArray(data.values)) {
-          // Assume first row is headers, skip it
-          const rows = data.values.slice(1);
-          console.log("Rows after header:", rows);
-          const entries: RosterEntry[] = rows.map((row: string[]) => ({
-            name: row[0] || "—",
-            email: row[1] || undefined,
-            joinedAt: row[2] || undefined,
-          }));
-          setRoster(entries.slice(0, 20)); // Limit to 20 for display
-          console.log("Parsed entries:", entries);
-        } else {
-          console.log("No values in response");
-          setRoster([]);
-        }
+    fetchRosterEntries(20)
+      .then((entries) => {
+        if (canceled) return;
+        setRoster(entries);
       })
       .catch((err) => {
-        console.error("Failed to load roster", err);
+        if (canceled) return;
         setError(`Could not load the private roster: ${err.message}`);
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        if (canceled) return;
+        setLoading(false);
+      });
+
+    return () => {
+      canceled = true;
+    };
   }, []);
 
   // if (!GOOGLE_SHEETS_API_KEY) return null;

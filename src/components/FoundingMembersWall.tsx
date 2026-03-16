@@ -1,9 +1,11 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { GOOGLE_FORM_URL } from "@/lib/links";
+import { fetchRosterEntries } from "@/lib/googleSheets";
 import { Trophy, Star, Medal } from 'lucide-react';
 
 export function FoundingMembersWall() {
-  const members = [
+  const defaultMembers = [
     "Iyamah Goodness",
     "Oluwatobi Onatade",
     "Gold",
@@ -11,6 +13,29 @@ export function FoundingMembersWall() {
     "Muiz",
     "Pele(Odinaka)"
   ];
+
+  const [members, setMembers] = useState<string[]>(defaultMembers);
+
+  useEffect(() => {
+    let canceled = false;
+
+    fetchRosterEntries(6)
+      .then((entries) => {
+        if (canceled) return;
+        const names = entries.map((e) => e.name).filter(Boolean);
+        if (names.length === 0) return;
+
+        const merged = [...names, ...defaultMembers.filter((m) => !names.includes(m))].slice(0, 6);
+        setMembers(merged);
+      })
+      .catch((err) => {
+        console.error("Failed to load founding members", err);
+      });
+
+    return () => {
+      canceled = true;
+    };
+  }, []);
 
   const getRankBadge = (index: number) => {
     switch(index) {

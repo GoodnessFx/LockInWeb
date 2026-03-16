@@ -126,7 +126,7 @@ export function About() {
           >
             
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2 sm:mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>10K+</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2 sm:mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>100</div>
               <div className="text-white/50 text-xs sm:text-sm tracking-widest uppercase font-bold">Active Users</div>
             </div>
             <div className="text-center">
