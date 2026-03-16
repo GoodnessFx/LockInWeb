@@ -86,7 +86,7 @@ export function PrivateRoster() {
   // if (!GOOGLE_SHEETS_API_KEY) return null;
 
   return (
-    <section className="py-32 bg-[#16213e] overflow-hidden">
+    <section className="py-24 sm:py-32 bg-[#16213e] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
           <motion.div
@@ -100,24 +100,24 @@ export function PrivateRoster() {
             Private Roster
           </motion.div>
         </div>
-        <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white text-center" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 text-white text-center leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
           Private <span className="text-[#D4AF37] italic">Roster</span>
         </h2>
-        <p className="text-white/50 text-lg md:text-xl mb-16 max-w-2xl mx-auto text-center font-light" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
+        <p className="text-white/50 text-base sm:text-lg md:text-xl mb-12 sm:mb-16 max-w-2xl mx-auto text-center font-light px-4" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
           View the list of everyone who has filled the beta application. Real people, real growth.
         </p>
         
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20 gap-4">
-            <div className="w-12 h-12 border-4 border-[#D4AF37]/20 border-t-[#D4AF37] rounded-full animate-spin"></div>
-            <div className="text-[#D4AF37] font-bold tracking-widest text-xs uppercase">Loading Roster...</div>
+            <div className="w-10 h-10 sm:w-12 sm:h-12 border-4 border-[#D4AF37]/20 border-t-[#D4AF37] rounded-full animate-spin"></div>
+            <div className="text-[#D4AF37] font-bold tracking-widest text-[10px] sm:text-xs uppercase">Loading Roster...</div>
           </div>
         ) : error ? (
-          <div className="text-destructive bg-destructive/10 border border-destructive/20 p-6 rounded-2xl text-center">{error}</div>
+          <div className="text-destructive bg-destructive/10 border border-destructive/20 p-6 rounded-2xl text-center text-sm sm:text-base">{error}</div>
         ) : roster.length === 0 ? (
-          <div className="text-white/30 text-center py-20 border-2 border-dashed border-white/10 rounded-[3rem]">No entries found yet. Be the first to apply!</div>
+          <div className="text-white/30 text-center py-16 sm:py-20 border-2 border-dashed border-white/10 rounded-[2rem] sm:rounded-[3rem] px-6">No entries found yet. Be the first to apply!</div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {roster.map((entry, idx) => (
               <motion.div 
                 key={idx}
@@ -125,12 +125,12 @@ export function PrivateRoster() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition-all duration-300 group"
+                className="rounded-2xl border border-white/10 p-5 sm:p-6 bg-white/5 hover:bg-white/10 transition-all duration-300 group"
               >
-                <div className="font-bold text-white text-xl mb-1 group-hover:text-[#D4AF37] transition-colors" style={{ fontFamily: 'Cormorant Garamond, serif' }}>{entry.name}</div>
-                {entry.email ? <div className="text-sm text-white/40 font-light mb-3">{entry.email}</div> : null}
+                <div className="font-bold text-white text-lg sm:text-xl mb-1 group-hover:text-[#D4AF37] transition-colors" style={{ fontFamily: 'Cormorant Garamond, serif' }}>{entry.name}</div>
+                {entry.email ? <div className="text-xs sm:text-sm text-white/40 font-light mb-3 truncate">{entry.email}</div> : null}
                 {entry.joinedAt ? (
-                  <div className="text-[10px] text-[#D4AF37]/60 font-bold uppercase tracking-widest bg-[#D4AF37]/10 inline-block px-3 py-1 rounded-full border border-[#D4AF37]/20">
+                  <div className="text-[9px] sm:text-[10px] text-[#D4AF37]/60 font-bold uppercase tracking-widest bg-[#D4AF37]/10 inline-block px-3 py-1 rounded-full border border-[#D4AF37]/20">
                     Joined {entry.joinedAt}
                   </div>
                 ) : null}

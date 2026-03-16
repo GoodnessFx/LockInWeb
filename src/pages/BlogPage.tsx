@@ -111,47 +111,39 @@ export function BlogPage() {
       </section>
 
       {/* FEATURED POST */}
-      <section style={{ padding: '60px 24px', maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="px-5 sm:px-6 py-10 sm:py-16 max-w-[1280px] mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          style={{ 
-            display: 'flex', 
-            flexDirection: 'column',
-            background: 'rgba(255,255,255,0.03)', 
-            borderRadius: '32px', overflow: 'hidden', 
-            border: '1px solid rgba(255,255,255,0.07)',
-            cursor: 'pointer'
-          }}
-          className="featured-card"
+          className="featured-card bg-white/5 rounded-3xl sm:rounded-[2rem] overflow-hidden border border-white/10 cursor-pointer flex flex-col"
         >
-          <div style={{ position: 'relative', minHeight: '300px', width: '100%' }}>
+          <div className="relative min-h-[240px] sm:min-h-[300px] w-full">
             <img 
               src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200" 
               alt="Featured" 
-              style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }}
+              className="w-full h-full object-cover absolute inset-0"
             />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(8,8,8,0.8), transparent)' }} />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 to-transparent" />
           </div>
-          <div style={{ padding: 'clamp(24px, 5vw, 60px)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <span style={{ color: '#D4AF37', fontWeight: 800, fontSize: '0.75rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '20px' }}>
+          <div className="p-6 sm:p-10 md:p-16 flex flex-col justify-center">
+            <span className="text-[#D4AF37] font-extrabold text-[10px] sm:text-xs tracking-[0.2em] uppercase mb-4 sm:mb-5">
               Featured Story
             </span>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 5vw, 2.8rem)', fontWeight: 700, marginBottom: '20px', lineHeight: 1.2 }}>
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-5 leading-tight text-white" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
               The Psychology of Deep Work in an Era of Distraction
             </h2>
-            <p style={{ fontFamily: 'Nunito Sans, sans-serif', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', color: 'rgba(255,255,255,0.6)', marginBottom: '32px', lineHeight: 1.6 }}>
+            <p className="font-sans text-sm sm:text-lg text-white/60 mb-8 sm:mb-10 leading-relaxed" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
               Discover how cognitive load theory and digital minimalism can transform your professional output.
             </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#D4AF37', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Users2 size={20} color="#0D1B2A" />
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#D4AF37] flex items-center justify-center">
+                <Users2 size={18} color="#0D1B2A" />
               </div>
               <div>
-                <span style={{ display: 'block', fontSize: '0.9rem', fontWeight: 700 }}>Dr. Sarah Chen</span>
-                <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)' }}>Cognitive Scientist</span>
+                <span className="block text-sm sm:text-base font-bold text-white">Dr. Sarah Chen</span>
+                <span className="text-xs sm:text-sm text-white/40">Cognitive Scientist</span>
               </div>
             </div>
           </div>
@@ -159,46 +151,23 @@ export function BlogPage() {
       </section>
 
       {/* GRID SECTION */}
-      <section style={{ padding: '60px 0' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ 
-            display: 'flex', 
-            flexDirection: 'column',
-            gap: '24px',
-            marginBottom: '48px' 
-          }}>
+      <section className="py-10 sm:py-16">
+        <div className="max-w-[1280px] mx-auto px-5 sm:px-6">
+          <div className="flex flex-col gap-5 sm:gap-6 mb-8 sm:mb-12">
             <div>
-              <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2.5rem, 6vw, 3rem)', fontWeight: 700 }}>Latest Updates</h3>
-              <p style={{ color: 'rgba(255,255,255,0.5)', marginTop: '8px' }}>Explore our most recent thoughts and discoveries.</p>
+              <h3 className="font-serif text-3xl sm:text-5xl font-bold text-white" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Latest Updates</h3>
+              <p className="text-sm sm:text-base text-white/50 mt-2">Explore our most recent thoughts and discoveries.</p>
             </div>
-            <div style={{ 
-              display: 'flex', 
-              gap: '8px', 
-              overflowX: 'auto', 
-              paddingBottom: '12px',
-              msOverflowStyle: 'none',
-              scrollbarWidth: 'none'
-            }} className="hide-scrollbar">
+            <div className="flex gap-2 overflow-x-auto pb-3 hide-scrollbar">
               {['All', 'Productivity', 'Science', 'Guide', 'Community'].map((cat, i) => (
-                <button key={cat} style={{ 
-                  padding: '8px 16px', borderRadius: '9999px', 
-                  background: i === 0 ? '#D4AF37' : 'transparent', 
-                  color: i === 0 ? '#0D1B2A' : 'white', 
-                  border: '1px solid ' + (i === 0 ? '#D4AF37' : 'rgba(255,255,255,0.2)'),
-                  fontSize: '0.75rem', fontWeight: 700, cursor: 'pointer', transition: 'all 0.3s',
-                  whiteSpace: 'nowrap'
-                }}>
+                <button key={cat} className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold transition-all whitespace-nowrap border ${i === 0 ? 'bg-[#D4AF37] text-[#0D1B2A] border-[#D4AF37]' : 'bg-transparent text-white border-white/20'}`}>
                   {cat}
                 </button>
               ))}
             </div>
           </div>
 
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))', 
-            gap: '24px' 
-          }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {blogPosts.map((post, index) => (
               <motion.div
                 key={post.id}
@@ -206,55 +175,34 @@ export function BlogPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                style={{ cursor: 'pointer' }}
-                className="blog-card"
+                className="cursor-pointer group"
               >
-                <div style={{ 
-                  borderRadius: '24px', overflow: 'hidden', 
-                  background: 'rgba(255,255,255,0.03)', 
-                  border: '1px solid rgba(255,255,255,0.06)',
-                  transition: 'all 0.3s', height: '100%',
-                  display: 'flex', flexDirection: 'column'
-                }}>
-                  <div style={{ height: '220px', overflow: 'hidden', position: 'relative' }}>
+                <div className="rounded-3xl overflow-hidden bg-white/5 border border-white/10 transition-all duration-300 h-full flex flex-col hover:border-[#D4AF37]/30">
+                  <div className="h-52 sm:h-56 overflow-hidden relative">
                     <img 
                       src={post.image} 
                       alt={post.title} 
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }}
-                      className="card-img"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div style={{ 
-                      position: 'absolute', top: '16px', left: '16px', 
-                      background: 'rgba(212,175,55,0.95)', color: '#0D1B2A', 
-                      padding: '4px 10px', borderRadius: '6px', 
-                      fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em'
-                    }}>
+                    <div className="absolute top-4 left-4 bg-[#D4AF37] text-[#0D1B2A] px-2.5 py-1 rounded-md text-[9px] font-extrabold uppercase tracking-widest">
                       {post.category}
                     </div>
                   </div>
-                  <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ display: 'flex', gap: '12px', color: 'rgba(255,255,255,0.4)', fontSize: '0.7rem', marginBottom: '12px', fontWeight: 600 }}>
-                      <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                        <Clock size={10} /> {post.readTime}
+                  <div className="p-6 sm:p-7 flex-1 flex flex-col">
+                    <div className="flex gap-3 text-white/40 text-[10px] sm:text-xs mb-3 font-semibold">
+                      <span className="flex items-center gap-1.5">
+                        <Clock size={12} /> {post.readTime}
                       </span>
                       <span>{post.date}</span>
                     </div>
-                    <h4 style={{ 
-                      fontFamily: 'Cormorant Garamond, serif', 
-                      fontSize: '1.5rem', fontWeight: 700, 
-                      marginBottom: '12px', lineHeight: 1.3, color: 'white' 
-                    }}>
+                    <h4 className="font-serif text-xl sm:text-2xl font-bold mb-3 leading-tight text-white group-hover:text-[#D4AF37] transition-colors" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                       {post.title}
                     </h4>
-                    <p style={{ 
-                      fontFamily: 'Nunito Sans, sans-serif', 
-                      fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', 
-                      lineHeight: 1.5, marginBottom: '20px' 
-                    }}>
+                    <p className="font-sans text-xs sm:text-sm text-white/50 leading-relaxed mb-5" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
                       {post.excerpt}
                     </p>
-                    <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '8px', color: '#D4AF37', fontWeight: 700, fontSize: '0.85rem' }}>
-                      Read Article <ArrowRight size={14} />
+                    <div className="mt-auto flex items-center gap-2 text-[#D4AF37] font-bold text-xs sm:text-sm uppercase tracking-wider">
+                      Read Article <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </div>

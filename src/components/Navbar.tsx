@@ -45,7 +45,7 @@ import { useState } from 'react';
            </svg> 
            <span style={{ 
              fontFamily: 'Cormorant Garamond, serif', 
-             fontSize: 'clamp(1.2rem, 5vw, 1.6rem)', 
+             fontSize: 'clamp(1.1rem, 4.5vw, 1.5rem)', 
              fontWeight: 700, 
              color: 'white', 
              letterSpacing: '-0.01em',
@@ -56,7 +56,7 @@ import { useState } from 'react';
          </Link> 
 
          {/* DESKTOP NAV LINKS */} 
-         <div style={{ display: 'flex', alignItems: 'center', gap: '24px', marginLeft: 'auto', marginRight: '24px' }} className="hidden lg:flex"> 
+         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginLeft: 'auto', marginRight: '20px' }} className="hidden lg:flex"> 
            {navLinks.map((link) => 
              link.isRoute ? ( 
                <Link 
@@ -66,9 +66,9 @@ import { useState } from 'react';
                    color: 'white', 
                    textDecoration: 'none', 
                    fontFamily: 'Montserrat, sans-serif', 
-                   fontSize: '0.75rem', 
+                   fontSize: '0.72rem', 
                    fontWeight: 700, 
-                   letterSpacing: '0.1em', 
+                   letterSpacing: '0.08em', 
                    textTransform: 'uppercase', 
                    whiteSpace: 'nowrap'
                  }} 
@@ -84,9 +84,9 @@ import { useState } from 'react';
                    color: 'white', 
                    textDecoration: 'none', 
                    fontFamily: 'Montserrat, sans-serif', 
-                   fontSize: '0.75rem', 
+                   fontSize: '0.72rem', 
                    fontWeight: 700, 
-                   letterSpacing: '0.1em', 
+                   letterSpacing: '0.08em', 
                    textTransform: 'uppercase', 
                    whiteSpace: 'nowrap'
                  }} 
@@ -99,14 +99,14 @@ import { useState } from 'react';
          </div> 
   
          {/* APP STORE BUTTONS */} 
-         <div style={{ display: 'flex', gap: '8px' }} className="hidden lg:flex"> 
+         <div style={{ display: 'flex', gap: '6px' }} className="hidden lg:flex"> 
            <a 
              href="#download" 
              style={{ 
-               display: 'flex', alignItems: 'center', gap: '6px', 
-               border: '1px solid rgba(255,255,255,0.2)', 
-               padding: '6px 14px', borderRadius: '9999px', 
-               color: 'white', fontSize: '0.7rem', fontWeight: 700, 
+               display: 'flex', alignItems: 'center', gap: '4px', 
+               border: '1px solid rgba(255,255,255,0.15)', 
+               padding: '5px 12px', borderRadius: '9999px', 
+               color: 'white', fontSize: '0.65rem', fontWeight: 700, 
                textDecoration: 'none', fontFamily: 'Montserrat, sans-serif', 
                letterSpacing: '0.02em', transition: 'all 0.3s', 
                whiteSpace: 'nowrap'
@@ -118,7 +118,7 @@ import { useState } from 'react';
              }} 
              onMouseLeave={e => { 
                (e.currentTarget as HTMLElement).style.background = 'transparent'; 
-               (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.2)'; 
+               (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.15)'; 
                (e.currentTarget as HTMLElement).style.color = 'white'; 
              }} 
            > 
@@ -127,10 +127,10 @@ import { useState } from 'react';
            <a 
              href="#download" 
              style={{ 
-               display: 'flex', alignItems: 'center', gap: '6px', 
-               border: '1px solid rgba(255,255,255,0.2)', 
-               padding: '6px 14px', borderRadius: '9999px', 
-               color: 'white', fontSize: '0.7rem', fontWeight: 700, 
+               display: 'flex', alignItems: 'center', gap: '4px', 
+               border: '1px solid rgba(255,255,255,0.15)', 
+               padding: '5px 12px', borderRadius: '9999px', 
+               color: 'white', fontSize: '0.65rem', fontWeight: 700, 
                textDecoration: 'none', fontFamily: 'Montserrat, sans-serif', 
                letterSpacing: '0.02em', transition: 'all 0.3s', 
                whiteSpace: 'nowrap'
@@ -142,7 +142,7 @@ import { useState } from 'react';
              }} 
              onMouseLeave={e => { 
                (e.currentTarget as HTMLElement).style.background = 'transparent'; 
-               (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.2)'; 
+               (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.15)'; 
                (e.currentTarget as HTMLElement).style.color = 'white'; 
              }} 
            > 
@@ -154,9 +154,10 @@ import { useState } from 'react';
          <div className="flex lg:hidden items-center ml-auto">
            <button 
              onClick={() => setIsOpen(!isOpen)} 
-             style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#D4AF37', padding: '8px' }} 
+             style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#D4AF37', padding: '6px' }} 
+             aria-label="Toggle menu"
            > 
-             {isOpen ? <X size={24} /> : <Menu size={24} />} 
+             {isOpen ? <X size={22} /> : <Menu size={22} />} 
            </button> 
          </div> 
        </motion.nav> 

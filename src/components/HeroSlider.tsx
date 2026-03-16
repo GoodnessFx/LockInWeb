@@ -70,12 +70,12 @@ import { useState, useEffect } from 'react';
          zIndex: 5, overflow: 'hidden', 
          background: 'rgba(0,0,0,0.3)', 
          backdropFilter: 'blur(4px)', 
-         padding: '10px 0', 
+         padding: '8px 0', 
          borderBottom: '1px solid rgba(255,255,255,0.05)', 
        }}> 
          <style>{` 
            @keyframes marquee-scroll { 
-             from { transform: translateX(100vw) } 
+             from { transform: translateX(100%) } 
              to { transform: translateX(-100%) } 
            } 
            @keyframes phrase-slide { 
@@ -91,19 +91,11 @@ import { useState, useEffect } from 'react';
              100% { transform: scale(1.7); opacity: 0 } 
            } 
          `}</style> 
-         <div style={{ display: 'inline-block', whiteSpace: 'nowrap', animation: 'marquee-scroll 35s linear infinite' }}> 
+         <div style={{ display: 'inline-block', whiteSpace: 'nowrap', animation: 'marquee-scroll 40s linear infinite' }}> 
            <span style={{ 
              fontFamily: 'Montserrat, sans-serif', 
-             fontSize: '0.75rem', fontWeight: 600, 
-             letterSpacing: '0.18em', textTransform: 'uppercase', 
-             color: '#D4AF37', 
-           }}> 
-             Rent is due everyday — Discipline is the rent you pay for greatness — Most people rest. You grind. — The clock doesn't stop. Neither should you. — Obsession is a gift. Use it. — Average is the enemy. Lock in. — Your future self is watching. Don't disappoint. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-           </span> 
-           <span style={{ 
-             fontFamily: 'Montserrat, sans-serif', 
-             fontSize: '0.75rem', fontWeight: 600, 
-             letterSpacing: '0.18em', textTransform: 'uppercase', 
+             fontSize: 'clamp(0.6rem, 2vw, 0.75rem)', fontWeight: 600, 
+             letterSpacing: '0.15em', textTransform: 'uppercase', 
              color: '#D4AF37', 
            }}> 
              Rent is due everyday — Discipline is the rent you pay for greatness — Most people rest. You grind. — The clock doesn't stop. Neither should you. — Obsession is a gift. Use it. — Average is the enemy. Lock in. — Your future self is watching. Don't disappoint. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -113,78 +105,52 @@ import { useState, useEffect } from 'react';
    
        {/* HERO CONTENT */} 
        <div style={{ position: 'absolute', inset: 0, zIndex: 3, display: 'flex', alignItems: 'center' }}> 
-         <div style={{ maxWidth: '1280px', width: '100%', margin: '0 auto', padding: '0 48px', paddingTop: '80px' }}> 
+         <div className="max-w-[1280px] w-full mx-auto px-6 sm:px-12 pt-10 sm:pt-20"> 
            <motion.div 
              initial={{ opacity: 0, y: 30 }} 
              animate={{ opacity: 1, y: 0 }} 
              transition={{ delay: 0.5, duration: 1 }} 
+             style={{ textAlign: 'left', maxWidth: '100%' }}
            > 
              <h1 style={{ 
                fontFamily: 'Cormorant Garamond, serif', 
-               fontSize: 'clamp(2.8rem, 6vw, 5.2rem)', 
+               fontSize: 'clamp(2.2rem, 8vw, 5.2rem)', 
                fontWeight: 700, 
                color: 'white', 
                lineHeight: 1.1, 
-               marginBottom: '20px', 
+               marginBottom: '16px', 
                textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(212,175,55,0.15)', 
              }}> 
                The World Rewards<br />the Ones Who Don't Quit 
              </h1> 
              <p style={{ 
                fontFamily: 'Nunito Sans, sans-serif', 
-               fontSize: 'clamp(1rem, 1.8vw, 1.2rem)', 
+               fontSize: 'clamp(0.95rem, 4vw, 1.2rem)', 
                color: 'rgba(255,255,255,0.88)', 
-               lineHeight: 1.85, 
+               lineHeight: 1.7, 
                maxWidth: '540px', 
-               marginBottom: '36px', 
+               marginBottom: '32px', 
                fontWeight: 300, 
              }}> 
                In silent rooms, in early mornings, in the grind nobody sees — Locked In shows up. We believe focus is never scarce. Only the tools are. 
              </p> 
-             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}> 
+             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}> 
                <a 
                  href="#download" 
+                 className="px-7 sm:px-9 py-3 sm:py-3.5 bg-gradient-to-r from-[#D4AF37] to-[#f0c040] text-[#0D1B2A] rounded-full font-extrabold text-sm sm:text-base transition-transform hover:scale-105 shadow-lg shadow-[#D4AF37]/20 flex items-center"
                  style={{ 
-                   padding: '14px 36px', 
-                   background: 'linear-gradient(135deg, #D4AF37, #f0c040)', 
-                   color: '#0D1B2A', 
-                   borderRadius: '9999px', 
-                   fontWeight: 800, 
-                   fontSize: '1rem', 
                    fontFamily: 'Montserrat, sans-serif', 
                    textDecoration: 'none', 
-                   boxShadow: '0 8px 24px rgba(212,175,55,0.35)', 
-                   transition: 'all 0.3s', 
-                   display: 'inline-flex', 
-                   alignItems: 'center', 
                  }} 
-                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.transform = 'scale(1.05)'} 
-                 onMouseLeave={e => (e.currentTarget as HTMLElement).style.transform = 'scale(1)'} 
                > 
                  Start Locking In → 
                </a> 
                <a 
                  href="#features" 
+                 className="px-7 sm:px-9 py-3 sm:py-3.5 border-2 border-white/35 text-white rounded-full font-bold text-sm sm:text-base transition-all hover:bg-white hover:text-[#0D1B2A] flex items-center"
                  style={{ 
-                   padding: '14px 36px', 
-                   border: '2px solid rgba(255,255,255,0.35)', 
-                   color: 'white', 
-                   borderRadius: '9999px', 
-                   fontWeight: 700, 
-                   fontSize: '1rem', 
                    fontFamily: 'Montserrat, sans-serif', 
                    textDecoration: 'none', 
-                   transition: 'all 0.3s', 
-                   display: 'inline-flex', 
-                   alignItems: 'center', 
-                 }} 
-                 onMouseEnter={e => { 
-                   (e.currentTarget as HTMLElement).style.background = 'white'; 
-                   (e.currentTarget as HTMLElement).style.color = '#0D1B2A'; 
-                 }} 
-                 onMouseLeave={e => { 
-                   (e.currentTarget as HTMLElement).style.background = 'transparent'; 
-                   (e.currentTarget as HTMLElement).style.color = 'white'; 
                  }} 
                > 
                  See How It Works 
@@ -195,7 +161,7 @@ import { useState, useEffect } from 'react';
        </div> 
    
        {/* ROTATING PHRASE - bottom right */} 
-       <div style={{ position: 'absolute', bottom: '96px', right: '32px', zIndex: 5, textAlign: 'right', maxWidth: '280px' }}> 
+       <div className="hidden sm:block" style={{ position: 'absolute', bottom: '96px', right: '32px', zIndex: 5, textAlign: 'right', maxWidth: '280px' }}> 
          <AnimatePresence mode="wait"> 
            <motion.span 
              key={phraseIndex} 
@@ -222,21 +188,13 @@ import { useState, useEffect } from 'react';
        </div> 
    
        {/* SLIDE INDICATORS */} 
-       <div style={{ position: 'absolute', bottom: '28px', left: '50%', transform: 'translateX(-50%)', zIndex: 5, display: 'flex', gap: '8px', alignItems: 'center' }}> 
+       <div className="absolute bottom-6 left-6 sm:left-1/2 sm:-translate-x-1/2 z-[5] flex gap-1.5 sm:gap-2 items-center"> 
          {IMAGES.map((_, index) => ( 
            <button 
              key={index} 
              onClick={() => setCurrentSlide(index)} 
-             style={{ 
-               height: '8px', 
-               width: index === currentSlide ? '32px' : '8px', 
-               borderRadius: '9999px', 
-               background: index === currentSlide ? '#D4AF37' : 'rgba(255,255,255,0.3)', 
-               border: 'none', 
-               cursor: 'pointer', 
-               transition: 'all 0.4s', 
-               boxShadow: index === currentSlide ? '0 0 12px rgba(212,175,55,0.5)' : 'none', 
-             }} 
+             className={`h-1.5 sm:h-2 rounded-full transition-all duration-400 ${index === currentSlide ? 'w-6 sm:w-8 bg-[#D4AF37] shadow-[0_0_12px_rgba(212,175,55,0.5)]' : 'w-1.5 sm:w-2 bg-white/30'}`}
+             style={{ border: 'none', cursor: 'pointer' }} 
              aria-label={`Slide ${index + 1}`} 
            /> 
          ))} 
