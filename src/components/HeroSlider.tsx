@@ -136,7 +136,9 @@ import { useState, useEffect } from 'react';
              </p> 
              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}> 
                <a 
-                 href="#download" 
+                 href="https://tally.so/r/b5O9xo" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
                  className="px-7 sm:px-9 py-3 sm:py-3.5 bg-gradient-to-r from-[#D4AF37] to-[#f0c040] text-[#0D1B2A] rounded-full font-extrabold text-sm sm:text-base transition-transform hover:scale-105 shadow-lg shadow-[#D4AF37]/20 flex items-center"
                  style={{ 
                    fontFamily: 'Montserrat, sans-serif', 
@@ -146,7 +148,9 @@ import { useState, useEffect } from 'react';
                  Start Locking In → 
                </a> 
                <a 
-                 href="#features" 
+                 href="https://tally.so/r/b5O9xo" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
                  className="px-7 sm:px-9 py-3 sm:py-3.5 border-2 border-white/35 text-white rounded-full font-bold text-sm sm:text-base transition-all hover:bg-white hover:text-[#0D1B2A] flex items-center"
                  style={{ 
                    fontFamily: 'Montserrat, sans-serif', 

@@ -123,7 +123,9 @@ export function Navbar() {
           </div> 
           <div style={{ display: 'flex', gap: '6px' }}> 
             <a 
-              href="#download" 
+              href="https://tally.so/r/b5O9xo" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               style={{ 
                 display: 'flex', alignItems: 'center', gap: '4px', 
                 border: '1px solid rgba(255,255,255,0.15)', 
@@ -147,7 +149,9 @@ export function Navbar() {
               App Store 
             </a> 
             <a 
-              href="#download" 
+              href="https://tally.so/r/b5O9xo" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               style={{ 
                 display: 'flex', alignItems: 'center', gap: '4px', 
                 border: '1px solid rgba(255,255,255,0.15)', 
@@ -243,22 +247,32 @@ export function Navbar() {
                 ))} 
               </div> 
               <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '12px', paddingBottom: '20px' }}> 
-                <a href="#download" style={{ 
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', 
-                  background: '#D4AF37', color: '#0D1B2A', padding: '14px', 
-                  borderRadius: '9999px', fontWeight: 800, fontSize: '0.8rem', 
-                  textDecoration: 'none', fontFamily: 'Montserrat, sans-serif', 
-                  letterSpacing: '0.08em', textTransform: 'uppercase', 
-                }}> 
+                <a 
+                  href="https://tally.so/r/b5O9xo" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ 
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', 
+                    background: '#D4AF37', color: '#0D1B2A', padding: '14px', 
+                    borderRadius: '9999px', fontWeight: 800, fontSize: '0.8rem', 
+                    textDecoration: 'none', fontFamily: 'Montserrat, sans-serif', 
+                    letterSpacing: '0.08em', textTransform: 'uppercase', 
+                  }} 
+                > 
                   App Store 
                 </a> 
-                <a href="#download" style={{ 
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', 
-                  border: '2px solid #D4AF37', color: '#D4AF37', padding: '14px', 
-                  borderRadius: '9999px', fontWeight: 800, fontSize: '0.8rem', 
-                  textDecoration: 'none', fontFamily: 'Montserrat, sans-serif', 
-                  letterSpacing: '0.08em', textTransform: 'uppercase', 
-                }}> 
+                <a 
+                  href="https://tally.so/r/b5O9xo" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ 
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', 
+                    border: '2px solid #D4AF37', color: '#D4AF37', padding: '14px', 
+                    borderRadius: '9999px', fontWeight: 800, fontSize: '0.8rem', 
+                    textDecoration: 'none', fontFamily: 'Montserrat, sans-serif', 
+                    letterSpacing: '0.08em', textTransform: 'uppercase', 
+                  }} 
+                > 
                   Google Play 
                 </a> 
               </div> 

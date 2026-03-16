@@ -68,7 +68,12 @@ export function CTA() {
               className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 px-6"
             >
               <Button asChild className="h-16 w-full sm:w-auto px-10 border-2 border-white/20 text-white bg-white/5 hover:bg-white hover:text-[#0D1B2A] font-bold rounded-full transition-all duration-300 backdrop-blur-xl cursor-pointer flex items-center justify-center gap-3 group">
-                <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                <a 
+                  href="https://tally.so/r/b5O9xo" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-3"
+                >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C4.7 17.15 4.34 10.97 7.5 9.4c1.55-.77 2.8-.23 3.65.24 1.14.63 1.83.56 2.94 0 1.05-.53 2.6-.96 3.73.53 2.5 1.17 3.32 5.06 1.73 10.11zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.31 2.53-2.23 4.54-3.74 4.25z"/>
                   </svg>
@@ -76,7 +81,12 @@ export function CTA() {
                 </a>
               </Button>
               <Button asChild className="h-16 w-full sm:w-auto px-10 border-2 border-white/20 text-white bg-white/5 hover:bg-white hover:text-[#0D1B2A] font-bold rounded-full transition-all duration-300 backdrop-blur-xl cursor-pointer flex items-center justify-center gap-3 group">
-                <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                <a 
+                  href="https://tally.so/r/b5O9xo" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-3"
+                >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.1-.12V1.934a1.003 1.003 0 0 1 .1-.12zm11.234 10.186l2.844-2.844-3.414-1.951-4.222 4.795 4.792 0zm3.324-3.324l3.15 1.8c.618.353.618.928 0 1.281l-3.15 1.8-3.324-3.324 3.324-3.557zm-3.324 7.114l3.414-1.951-2.844-2.844-4.792 0 4.222 4.795z"/>
                   </svg>

@@ -55,9 +55,13 @@ export function WaitlistBeta() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
               <Button asChild size="lg" className="h-16 md:h-20 w-full px-8 md:px-12 rounded-2xl bg-gradient-to-r from-[#D4AF37] to-[#f0c040] text-[#0D1B2A] hover:shadow-[#D4AF37]/20 font-bold text-lg md:text-xl shadow-xl transition-all duration-300 border-none cursor-pointer flex items-center justify-center gap-3">
-                <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Apply Now <ExternalLink className="size-5 md:size-6" />
-                </a>
+                <a 
+                  href="https://tally.so/r/b5O9xo" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                > 
+                  Apply Now <ExternalLink className="size-5 md:size-6" /> 
+                </a> 
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
