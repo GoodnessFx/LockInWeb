@@ -26,16 +26,16 @@ import { useState } from 'react';
            left: 0, 
            right: 0, 
            zIndex: 50, 
-           height: '64px', 
            display: 'flex', 
            alignItems: 'center', 
            justifyContent: 'space-between', 
            padding: '0 20px', 
-           background: 'rgba(8,8,8,0.8)', 
            backdropFilter: 'blur(16px)', 
            WebkitBackdropFilter: 'blur(16px)', 
            borderBottom: '1px solid rgba(255,255,255,0.08)', 
+           transition: 'all 0.3s ease',
          }} 
+         className="h-[52px] lg:h-[64px] bg-[rgba(8,8,8,0.85)] lg:bg-[rgba(8,8,8,0.8)]"
        > 
          {/* LOGO */} 
          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}> 
@@ -45,12 +45,14 @@ import { useState } from 'react';
            </svg> 
            <span style={{ 
              fontFamily: 'Cormorant Garamond, serif', 
-             fontSize: 'clamp(1.1rem, 4.5vw, 1.5rem)', 
              fontWeight: 700, 
              color: 'white', 
              letterSpacing: '-0.01em',
-             whiteSpace: 'nowrap'
-           }}> 
+             whiteSpace: 'nowrap',
+             transition: 'font-size 0.3s ease'
+           }}
+           className="text-[1.2rem] lg:text-[1.5rem]"
+           > 
              Locked In 
            </span> 
          </Link> 
