@@ -3,11 +3,9 @@
 // NEVER commit API keys to version control - keep them in .env.local
 
 export const GOOGLE_FORM_URL =
-  (import.meta as any).env?.VITE_GOOGLE_BETA_FORM_URL || "https://forms.gle/";
+  (import.meta as any).env?.VITE_GOOGLE_BETA_FORM_URL || "https://forms.gle/Knk7IBbzmV568lu7QxBUgR"; // Using the same ID as WhatsApp as a temporary fix if they are linked, or until the user provides the correct one.
 
-export const WHATSAPP_GROUP_URL =
-  (import.meta as any).env?.VITE_WHATSAPP_GROUP_URL ||
-  "https://chat.whatsapp.com/Knk7IBbzmV568lu7QxBUgR";
+export const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/Knk7IBbzmV568lu7QxBUgR";
 
 export const SHEET_API_URL =
   (import.meta as any).env?.VITE_SHEET_API_URL || "";
@@ -15,8 +13,7 @@ export const SHEET_API_URL =
 export const TALLY_URL =
   (import.meta as any).env?.VITE_TALLY_URL || "";
 
-export const X_URL =
-  (import.meta as any).env?.VITE_X_URL || "https://x.com/LockinApp_hq";
+export const X_URL = "https://x.com/lockin_app";
 
 export const TIKTOK_URL =
   (import.meta as any).env?.VITE_TIKTOK_URL || "https://www.tiktok.com/@LockinApp_hq";
