@@ -35,51 +35,25 @@ import { useState } from 'react';
            borderBottom: '1px solid rgba(255,255,255,0.08)', 
            transition: 'all 0.3s ease',
          }} 
-         className="h-[52px] lg:h-[64px] bg-[rgba(8,8,8,0.85)] lg:bg-[rgba(8,8,8,0.8)]"
+         className="h-[52px] lg:h-[64px] bg-[rgba(8,8,8,0.9)] lg:bg-[rgba(8,8,8,0.8)]"
        > 
          {/* LOGO */} 
-         <Link to="/" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textDecoration: 'none', lineHeight: 1 }}> 
+         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}> 
+           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2.5" className="lg:w-5 lg:h-5"> 
+             <rect x="3" y="11" width="18" height="11" rx="2" /> 
+             <path d="M7 11V7a5 5 0 0 1 10 0v4" /> 
+           </svg> 
            <span style={{ 
-             fontFamily: 'Montserrat, sans-serif', 
-             fontSize: 'clamp(0.5rem, 2vw, 0.6rem)', 
-             fontWeight: 800, 
-             color: '#D4AF37', 
-             letterSpacing: '0.2em',
-             textTransform: 'uppercase',
-             marginBottom: '2px'
-           }}> 
-             Focus on
-           </span> 
-           <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2.5" className="lg:w-5 lg:h-5"> 
-               <rect x="3" y="11" width="18" height="11" rx="2" /> 
-               <path d="M7 11V7a5 5 0 0 1 10 0v4" /> 
-             </svg> 
-             <span style={{ 
-               fontFamily: 'Cormorant Garamond, serif', 
-               fontWeight: 700, 
-               color: 'white', 
-               letterSpacing: '-0.01em',
-               whiteSpace: 'nowrap',
-               transition: 'font-size 0.3s ease'
-             }}
-             className="text-[1.1rem] lg:text-[1.4rem]"
-             > 
-               LOCKED IN 
-             </span> 
-           </div>
-           <span style={{ 
-             fontFamily: 'Montserrat, sans-serif', 
-             fontSize: 'clamp(0.4rem, 1.5vw, 0.5rem)', 
-             fontWeight: 600, 
-             color: 'rgba(255,255,255,0.6)', 
-             letterSpacing: '0.15em',
-             textTransform: 'uppercase',
-             marginTop: '2px'
+             fontFamily: 'Cormorant Garamond, serif', 
+             fontWeight: 700, 
+             color: 'white', 
+             letterSpacing: '-0.01em',
+             whiteSpace: 'nowrap',
+             transition: 'font-size 0.3s ease'
            }}
-           className="hidden sm:block"
+           className="text-[1.3rem] lg:text-[1.5rem]"
            > 
-             Master Your Niche
+             LOCKED IN 
            </span> 
          </Link> 
 
@@ -185,7 +159,7 @@ import { useState } from 'react';
              style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#D4AF37', padding: '6px' }} 
              aria-label="Toggle menu"
            > 
-             {isOpen ? <X size={22} /> : <Menu size={22} />} 
+             {isOpen ? <X size={28} /> : <Menu size={28} />} 
            </button> 
          </div> 
        </motion.nav> 
