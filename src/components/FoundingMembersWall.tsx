@@ -50,7 +50,7 @@ export function FoundingMembersWall() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {members.map((member, index) => (
             <motion.div 
               key={member}
@@ -59,10 +59,10 @@ export function FoundingMembersWall() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.02, backgroundColor: 'rgba(212, 175, 55, 0.05)' }}
-              className="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/10 group transition-all duration-300"
+              className="flex items-center justify-between p-5 md:p-6 bg-white/5 rounded-2xl border border-white/10 group transition-all duration-300"
             >
               <div className="flex items-center gap-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 font-bold text-xl text-[#D4AF37] border border-white/5 group-hover:border-[#D4AF37]/30" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 font-bold text-lg md:text-xl text-[#D4AF37] border border-white/5 group-hover:border-[#D4AF37]/30" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                   {index + 1}
                 </div>
                 <span className="text-xl md:text-2xl font-bold text-white group-hover:text-[#D4AF37] transition-colors" style={{ fontFamily: 'Cormorant Garamond, serif' }}>

@@ -37,15 +37,16 @@ export function CommunitySection() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-24">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-24 px-6">
           <motion.div
             whileHover={{ y: -5 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="w-full md:w-auto"
           >
-            <Button asChild className="h-20 px-12 bg-[#25D366] hover:bg-[#20bd5c] text-white font-bold rounded-2xl shadow-2xl transition-all duration-300 border-none cursor-pointer flex items-center gap-4 group">
+            <Button asChild className="h-16 md:h-20 w-full px-8 md:px-12 bg-[#25D366] hover:bg-[#20bd5c] text-white font-bold rounded-2xl shadow-2xl transition-all duration-300 border-none cursor-pointer flex items-center justify-center gap-4 group">
               <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
-                <Send className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
-                <span className="text-lg">Join the WhatsApp Community</span>
+                <Send className="h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
+                <span className="text-base md:text-lg">Join the WhatsApp Community</span>
               </a>
             </Button>
           </motion.div>
@@ -53,11 +54,12 @@ export function CommunitySection() {
           <motion.div
             whileHover={{ y: -5 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="w-full md:w-auto"
           >
-            <Button asChild variant="outline" className="h-20 px-12 border-2 border-white/10 text-white bg-white/5 hover:bg-white hover:text-[#0D1B2A] font-bold rounded-2xl transition-all duration-300 backdrop-blur-xl cursor-pointer flex items-center gap-4 group">
+            <Button asChild variant="outline" className="h-16 md:h-20 w-full px-8 md:px-12 border-2 border-white/10 text-white bg-white/5 hover:bg-white hover:text-[#0D1B2A] font-bold rounded-2xl transition-all duration-300 backdrop-blur-xl cursor-pointer flex items-center justify-center gap-4 group">
               <a href={X_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
-                <Twitter className="h-6 w-6 group-hover:scale-110 transition-transform" />
-                <span className="text-lg">Follow on X</span>
+                <Twitter className="h-5 w-5 md:h-6 md:w-6 group-hover:scale-110 transition-transform" />
+                <span className="text-base md:text-lg">Follow on X</span>
               </a>
             </Button>
           </motion.div>

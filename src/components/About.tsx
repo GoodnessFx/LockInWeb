@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Lock, PiggyBank, BarChart3 } from 'lucide-react';
 
@@ -41,7 +42,7 @@ export function About() {
             About Locked In
           </motion.div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl mb-8 font-bold leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+          <h2 className="text-3xl sm:text-5xl lg:text-7xl mb-8 font-bold leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
             <span className="text-[#D4AF37] italic">
               Master your niche
             </span>
@@ -49,14 +50,14 @@ export function About() {
             <span className="text-white">through discipline</span>
           </h2>
           
-          <p className="text-xl lg:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
+          <p className="text-lg lg:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light px-4" style={{ fontFamily: 'Nunito Sans, sans-serif' }}>
             Locked In helps you build discipline by tracking focused work sessions and blocking distractions, 
             ensuring you consistently grow your skills in tech, photography, or any niche you choose.
           </p>
             <br></br>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -66,7 +67,7 @@ export function About() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="relative group h-full"
             >
-              <div className="bg-white/5 backdrop-blur-md p-10 md:p-12 rounded-[3rem] border border-white/10 hover:border-[#D4AF37]/40 transition-all duration-500 group-hover:shadow-3xl group-hover:shadow-[#D4AF37]/10 group-hover:-translate-y-3 flex flex-col h-full min-h-[380px]">
+              <div className="bg-white/5 backdrop-blur-md p-8 sm:p-10 md:p-12 rounded-[2rem] sm:rounded-[3rem] border border-white/10 hover:border-[#D4AF37]/40 transition-all duration-500 group-hover:shadow-3xl group-hover:shadow-[#D4AF37]/10 group-hover:-translate-y-3 flex flex-col h-full min-h-[340px] md:min-h-[380px]">
                 {/* Background gradient on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
